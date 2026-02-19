@@ -1,14 +1,10 @@
-const jwt = require("jsonwebtoken")
-const User = require("../models/user.model");
-const AppError = require("./appError");
+const jwt = require("jsonwebtoken");
+const userRepository = require("../repositories/user.repository");
 
 const protect = async(req, res, next)=>{
     try {
         let token;
-        if(
-            req.headers.authorization && 
-            req.headers.authorization.startsWith("Bearer")
-        ){
+        if(req.headers.authorization?.startsWith("Bearer")){
             token = req.headers.authorization.split(" ")[1];
             if(!token){
                 return res
@@ -18,7 +14,7 @@ const protect = async(req, res, next)=>{
             // if token is found then verify the token
             const decode = jwt.verify(token, process.env.JWT_SECRET)
             // token holds the user id , get the user from database
-            const user = await User.findById(decode.id);
+            const user = await userRepository.findExistingUser(decode.id)
               // if there is no user then return back
     if(!user){
         return res.status(404).json({ success:"false", data:"User is not longer exist"})
