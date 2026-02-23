@@ -7,7 +7,7 @@ const expenseSchema = new mongoose.Schema(
   amount: { type: Number, required: true },
 
   category: {
-    type: ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "Category"
   },
 
@@ -18,10 +18,13 @@ const expenseSchema = new mongoose.Schema(
     enum: ["user", "organization"]
   },
 
-  ownerId: ObjectId,
+  ownerId: {
+    type:mongoose.Schema.Types.ObjectId,
+    refPath:'ownerType',
+  },
 
   createdBy: {
-    type: ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "User"
   },
 

@@ -1,14 +1,17 @@
 // this is the route to store users
 const express = require("express");
+const { protect } = require("../middleware/auth.middleware");
 const router = express.Router();
+const userController = require("../controllers/auth.controller")
 
-router.create("/users", );
 
-router.get("/users");
-router.get("/users/:id");
+router.post("/users", userController.registerUser)
 
-router.put("/users/:id");
+router.get("/users", protect, userController.loginUser);
+// router.get("/users/:id");
 
-router.delete("/users/:id");
+// router.put("/users/:id");
+
+// router.delete("/users/:id");
 
 module.exports = router;

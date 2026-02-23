@@ -1,0 +1,27 @@
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.btn {
+  display: block;
+  margin: 10px;
+  padding: 12px;
+  background: #22c55e;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.logout {
+  background: #ef4444;
+}

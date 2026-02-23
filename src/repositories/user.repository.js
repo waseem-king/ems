@@ -1,24 +1,49 @@
 
-const User = require("../models/user.model")
+const auth0Model = require("../models/auth0.model");
+const {userModel}= require("../models/index");
+// this is the model for auth0 , the users sign up using auth0 will use this model
+
 
 class UserRepository{
+    // store user signed up using auth0
+    async createByAuth0Id(auth0Id, data){
+        return await auth0Model.create({auth0Id, data})
+    }
+    // find the stored user
+    async findByAuth0Id(auth0Id){
+        return await auth0Model.findOne({auth0Id})
+    }
+    // update using auth0 
+    async updateByAuth0Id(auth0Id, data){
+        return await auth0Model.findOneAndUpdate(
+            {auth0Id},
+            data,
+            { new:true, runValidators:true}
+        )
+    }
+    // delte using auth0
+    async deleteByAuth0Id(auth0Id){
+        return await userModel.findOneAndDelete({auth0Id})
+    }
+
+
     async create(userData){
-        return await User.create(userData)
+        return await userModel.create(userData)
     }
     async findExistingUser(id){
-        return await User.findById(id)
+        return await userModel.findById(id)
     }
     async findAll(){
-        return await User.find()
+        return await userModel.find()
     }
     async findByEmail(email){
-        return await User.findOne({email})
+        return await userModel.findOne({email}).select("+password")
     }
     async deleteById(id){
-        return await User.findByIdAndDelete(id)
+        return await userModel.findByIdAndDelete(id)
     }
     async updateById(id, data){
-        return await User.findByIdAndUpdate(id, data, { new:true, runValidators:true})
+        return await userModel.findByIdAndUpdate(id, data, { new:true, runValidators:true})
     }
 }
 

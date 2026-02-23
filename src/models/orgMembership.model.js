@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const orgMemberSchema = new mongoose.Schema({
-        user: { type: ObjectId, ref: "User" },
+        user: { type:mongoose.Schema.Types.ObjectId, ref: "User" },
         role: {
             type: String,
             enum: ["admin", "member", "accountant"]

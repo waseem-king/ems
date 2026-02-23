@@ -13,7 +13,10 @@ const budgetSchema = new mongoose.Schema({
         enum: ["user", "organization"]
     },
 
-    ownerId: ObjectId
+    ownerId: {
+        type:mongoose.Schema.Types.ObjectId,
+        refPath:"ownerType"
+    }
 })
 
 module.exports = mongoose.model("Budgets", budgetSchema);

@@ -9,7 +9,10 @@ const categorySchema = new mongoose.Schema(
     enum: ["system", "custom"]
   },
 
-  ownerId: ObjectId // null for system
+  ownerId: {
+    type:mongoose.Schema.Types.ObjectId ,
+    default:null// null for system
+    }
 }
 
 )
