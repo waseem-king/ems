@@ -70,10 +70,18 @@ const limiter = rateLimit({
     windowMs:15*60*1000,
     max:100
 })
+app.get("/profile", (req, res) => {
+  if (!req.oidc.isAuthenticated()) {
+    return res.status(401).json({ message: "Not logged in" });
+  }
+
+  res.json(req.oidc.user);
+});
 // here is the link of public folder where it is exist html and css file
 app.use(express.static("./public"))
 // users routes are called here
 app.use("/api", limiter ,userRoutes)
+
 
 
 module.exports = app;

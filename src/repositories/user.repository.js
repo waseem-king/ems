@@ -23,7 +23,7 @@ class UserRepository{
     }
     // delte using auth0
     async deleteByAuth0Id(auth0Id){
-        return await userModel.findOneAndDelete({auth0Id})
+        return await auth0Model.findOneAndDelete({auth0Id})
     }
 
 
