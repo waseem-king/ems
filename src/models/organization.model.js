@@ -24,4 +24,4 @@ const organizationSchema = new mongoose.Schema({
     isActive: { type: Boolean, default: true }
 })
 
-module.exports = mongoose.model("Organizations", organizationSchema)
+module.exports = mongoose.model("Organization", organizationSchema)

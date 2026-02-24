@@ -2,7 +2,7 @@ const AppError = require("../middleware/appError");
 const userRepo = require("../repositories/user.repository");
 const { generateToken } = require("../utils/generateToken");
 
-class UserServices {
+class AuthServices {
     registerUser = async (data) => {
         // check if user already exist
         const alreadyExist = await userRepo.findByEmail(data.email);
@@ -52,4 +52,4 @@ class UserServices {
 }
 
 
-module.exports = new UserServices;
+module.exports = new AuthServices;

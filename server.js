@@ -1,6 +1,7 @@
-const connectDB = require("./config/db");
-const app = require("./app");
-const logger = require("./config/logger");
+const connectDB = require("./src/config/db");
+
+const app = require("./src/app");
+const logger = require("./src/config/logger");
 const PORT = process.env.PORT;
 
 
