@@ -12,5 +12,6 @@ module.exports = {
     expenseModel,
     organizationModel,
     orgMembershipModel,
-    userModel
+    userModel,
 }
+

@@ -13,7 +13,7 @@ const morgan = require("morgan")
 const logger = require("./config/logger")
 const auth0 = require("./config/auth0")
 const userRoutes = require("./routes/user.routes");
-const { orgRoutes } = require("./routes");
+const { orgRoutes, orgMemRoutes } = require("./routes");
 
 
 // use of helmet it prevents from xxs attacks
@@ -84,6 +84,8 @@ app.use(express.static("./public"))
 app.use("/api", limiter ,userRoutes)
 // here is the router for organization
 app.use("/api", orgRoutes)
+// here are the routes for organization member
+app.use("/api", orgMemRoutes)
 app.use((err, req, res, next) => {
     console.error(err);     // or logger.error(err)
 

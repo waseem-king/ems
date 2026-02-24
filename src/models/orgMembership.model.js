@@ -13,7 +13,7 @@ const orgMemberSchema = new mongoose.Schema({
         },
         role:{
             type:String,
-            enum:['ceo', 'hr', 'team_load', 'senior','junior'],
+            enum:['ceo', 'hr', 'team_lead', 'senior','junior'],
             default:"junior"
         },
         employeeEmail:{
@@ -25,7 +25,7 @@ const orgMemberSchema = new mongoose.Schema({
         isActive:{
             type:Boolean,
             default:true
-        },
+        },  
         joinedAt:{
             type:Date,
             default:Date.now
@@ -36,4 +36,8 @@ const orgMemberSchema = new mongoose.Schema({
 }
 )
 
+orgMemberSchema.index(
+  { employeeEmail: 1, organization: 1 },
+  { unique: true, sparse: true }
+)
 module.exports = mongoose.model("OrganizationMembership", orgMemberSchema);

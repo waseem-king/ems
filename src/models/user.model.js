@@ -18,6 +18,26 @@ const userSchema = new mongoose.Schema({
         required: true,
         select: false
     },
+    // in the case organization create their own organization member using this user schema
+    organization: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Organization",
+    },
+    // in the case organization create their own organization member using this user schema
+    role: {
+        type: String,
+        enum: ['ceo', 'hr', 'team_lead', 'senior', 'junior'],
+        default: "junior"
+    },
+    // in the case organization create their own organization member using this user schema
+    employeeEmail: {
+        type: String
+    },
+    // in the case organization create their own organization member using this user schema
+    about: {
+        type: String,
+    },
+    
     phone: String,
 
     avatar: String,
@@ -35,13 +55,13 @@ const userSchema = new mongoose.Schema({
 })
 
 // hash the password before dave in db
-userSchema.pre("save", async function(next){
-    if(!this.isModified("password")) return next();
+userSchema.pre("save", async function (next) {
+    if (!this.isModified("password")) return next();
     this.password = await bcrypt.hash(this.password, 12)
     next();
 })
 
-userSchema.methods.comparePassword = function (candidatePassword){
+userSchema.methods.comparePassword = function (candidatePassword) {
     return bcrypt.compare(candidatePassword, this.password)
 }
 

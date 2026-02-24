@@ -40,7 +40,8 @@ class UserRepository{
         return await userModel.findOne({email}).select("+password")
     }
     async deleteById(id){
-        return await userModel.findByIdAndDelete(id)
+        await userModel.findByIdAndDelete(id)
+        return { message:"User deleted successfully"}
     }
     async updateById(id, data){
         return await userModel.findByIdAndUpdate(id, data, { new:true, runValidators:true})
