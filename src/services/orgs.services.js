@@ -1,22 +1,49 @@
+// ==========================================================================
+// Organization Services - Business Logic for Organizations
+// ==========================================================================
+
+// ----------------------------- Dependencies -----------------------------
 const { orgsRepository } = require("../repositories");
 
+// ==========================================================================
 
-class OrgsServices{
-    async createOrg(data){
-        return await orgsRepository.createOrg(data)
+class OrgsServices {
+    /**
+     * Create a new organization
+     */
+    async createOrg(data) {
+        return await orgsRepository.createOrg(data);
     }
-    async getAllOrgs(){
-        return await orgsRepository.getAllOrgs()
+
+    /**
+     * Get all organizations
+     */
+    async getAllOrgs() {
+        return await orgsRepository.getAllOrgs();
     }
-    async getOne(id){
-        return await orgsRepository.getOne(id)
+
+    /**
+     * Get single organization by ID
+     */
+    async getOne(id) {
+        return await orgsRepository.getOne(id);
     }
-    async updateOrg(orgId, data){
-        return await orgsRepository.updateOrg(orgId, data)
+
+    /**
+     * Update organization
+     */
+    async updateOrg(orgId, data) {
+        return await orgsRepository.updateOrg(orgId, data);
     }
-    async deleteOrg(id){
-        return await orgsRepository.deleteOrg(id)
+
+    /**
+     * Delete organization
+     */
+    async deleteOrg(id) {
+        return await orgsRepository.deleteOrg(id);
     }
 }
+
+// ==========================================================================
 
 module.exports = new OrgsServices;

@@ -1,55 +1,84 @@
+// ==========================================================================
+// Auth Service - Authentication Business Logic
+// ==========================================================================
+
+// ----------------------------- Dependencies -----------------------------
 const AppError = require("../middleware/appError");
 const userRepo = require("../repositories/user.repository");
 const { generateToken } = require("../utils/generateToken");
 
+// ==========================================================================
+
 class AuthServices {
+    /**
+     * Register a new user
+     */
     registerUser = async (data) => {
-        // check if user already exist
+        // Check if user already exists
         const alreadyExist = await userRepo.findByEmail(data.email);
         if (alreadyExist) {
-            throw new AppError("User Already exist", 400)
+            throw new AppError("User Already exist", 400);
         }
-        // now if this is new user then store user in database and return user and toeken
+
+        // Create new user in database
         const user = await userRepo.create(data);
-        // now generate token and send it back to user
-        const token = generateToken({ id: user._id })
 
-        return { user, token }
-    }
+        // Generate token
+        const token = generateToken({ id: user._id });
 
-    // here is the function to generate token
+        return { user, token };
+    };
+
+    /**
+     * Login user with email and password
+     */
     loginUser = async (email, password) => {
-        // find the user using email
+        // Find user by email
         const user = await userRepo.findByEmail(email);
-        // if user not found throw the error
+
+        // If user not found
         if (!user) {
-            throw new AppError("User not Found", 404)
+            throw new AppError("User not Found", 404);
         }
-        // if user found now check the password
+
+        // Check password
         const isMatch = await user.comparePassword(password);
-        // if password not match return
         if (!isMatch) {
-            throw new AppError("Passoword not match", 400)
+            throw new AppError("Password not match", 400);
         }
-        // now if password is matched so set user last login date
+
+        // Update last login
         user.lastLogin = Date.now();
-        // save the user 
-        await user.save()
-        // generate the token and return with the user
-        const token = generateToken({ id: user._id })
-        return { user, token }
-    }
-    // get the user created from auth0
-    getMe = async (auth0User)=>{
-        return userRepo.findByAuth0Id(auth0User.sub)
-    }
-    updateMe = async (auth0User, data)=>{
-        return userRepo.updateByAuth0Id(auth0User.sub, data)
-    }
-    deleteMe = async (auth0User)=>{
-        return userRepo.deleteByAuth0Id(auth0User.sub)
-    } 
+        await user.save();
+
+        // Generate token
+        const token = generateToken({ id: user._id });
+
+        return { user, token };
+    };
+
+    /**
+     * Get current user from Auth0
+     */
+    getMe = async (auth0User) => {
+        return userRepo.findByAuth0Id(auth0User.sub);
+    };
+
+    /**
+     * Update current user
+     */
+    updateMe = async (auth0User, data) => {
+        return userRepo.updateByAuth0Id(auth0User.sub, data);
+    };
+
+    /**
+     * Delete current user
+     */
+    deleteMe = async (auth0User) => {
+        return userRepo.deleteByAuth0Id(auth0User.sub);
+    };
 }
 
+// ==========================================================================
 
 module.exports = new AuthServices;

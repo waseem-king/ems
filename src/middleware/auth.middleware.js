@@ -1,43 +1,79 @@
+// ==========================================================================
+// Auth Middleware - Authentication and Authorization
+// ==========================================================================
+
+// ----------------------------- Dependencies -----------------------------
 const jwt = require("jsonwebtoken");
 const userRepository = require("../repositories/user.repository");
 
-const protect = async(req, res, next)=>{
+// ==========================================================================
+
+/**
+ * Middleware to protect routes - verifies JWT token
+ */
+const protect = async (req, res, next) => {
     try {
         let token;
-        if(req.headers.authorization?.startsWith("Bearer")){
-            token = req.headers.authorization.split(" ")[1];
-            if(!token){
-                return res
-                          .status(400)
-                          .json({success:"false", data:"Not Authorized"})
-            }
-            // if token is found then verify the token
-            const decode = jwt.verify(token, process.env.JWT_SECRET)
-            // token holds the user id , get the user from database
-            const user = await userRepository.findExistingUser(decode.id)
-              // if there is no user then return back
-    if(!user){
-        return res.status(404).json({ success:"false", data:"User is not longer exist"})
-    }
-    // now attach this user to req, to verify if the token person is the original user
-    req.user = user;
-    next();
+
+        // 1️⃣ Check token exists
+        if (!req.headers.authorization?.startsWith("Bearer")) {
+            return res.status(401).json({
+                success: false,
+                message: "Not authorized. No token",
+            });
         }
+
+        // 2️⃣ Extract token
+        token = req.headers.authorization.split(" ")[1];
+
+        // 3️⃣ Verify token
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+        // 4️⃣ Get user from DB
+        const user = await userRepository.findExistingUser(decoded.id);
+
+        if (!user) {
+            return res.status(401).json({
+                success: false,
+                message: "User no longer exists",
+            });
+        }
+
+        // 5️⃣ Attach user to request
+        req.user = user;
+
+        next();
     } catch (error) {
-          return res.status(401).json({
-            success: "false",
-            data: "Not authorized"
+        return res.status(401).json({
+            success: false,
+            message: "Token invalid or expired",
         });
     }
-}
+};
 
-const authorize = (...roles)=>{
-    return (req, res, next)=>{
-        if(!roles.includes(req.user.role)){
-            return res.status(403).json({success:"false", data:"Forbiden! You don't have permission to access"})
+/**
+ * Middleware to authorize roles
+ */
+const authorize = (...roles) => {
+    return (req, res, next) => {
+        if (!req.user) {
+            return res.status(401).json({
+                success: false,
+                message: "Not authenticated",
+            });
         }
-        next();
-    }
-}
 
-module.exports = { protect, authorize}
+        if (!roles.includes(req.user.role)) {
+            return res.status(403).json({
+                success: false,
+                message: "Forbidden: insufficient permissions",
+            });
+        }
+
+        next();
+    };
+};
+
+// ==========================================================================
+
+module.exports = { protect, authorize };

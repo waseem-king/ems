@@ -1,93 +1,149 @@
-// app module is used to run the middlewars and routes
+// ==========================================================================
+// App Module - Main Express Application Configuration
+// ==========================================================================
+
+// ----------------------------- Core Dependencies -----------------------------
 const express = require("express");
 const app = express();
 
-const helmet = require("helmet")
-const cors = require("cors")
-const rateLimit = require("express-rate-limit")
-const mongoSanitize = require("express-mongo-sanitize")
-const xss = require("xss-clean")
-const hpp = require("hpp")
-const morgan = require("morgan")
+// ----------------------------- Security & Middleware -------------------------
+const helmet = require("helmet");
+const cors = require("cors");
+const rateLimit = require("express-rate-limit");
+const mongoSanitize = require("express-mongo-sanitize");
+const xss = require("xss-clean");
+const hpp = require("hpp");
+const morgan = require("morgan");
 
-const logger = require("./config/logger")
-const auth0 = require("./config/auth0")
+// ----------------------------- Config & Routes ------------------------------
+const logger = require("./config/logger");
+const auth0 = require("./config/auth0");
 const userRoutes = require("./routes/user.routes");
-const { orgRoutes, orgMemRoutes } = require("./routes");
+const { orgRoutes, orgMemRoutes, expenseRoutes } = require("./routes");
 
+// ==========================================================================
+// Security Middleware
+// ==========================================================================
 
-// use of helmet it prevents from xxs attacks
-app.use(helmet())
-// cors is used for cross platform resource sharing
+// Helmet - Prevents XXS attacks
+app.use(helmet());
+
+// CORS - Cross-platform resource sharing
 app.use(cors({
-origin: ["http://localhost:3000"], // frontend
-  credentials: true
-}))
+    origin: ["http://localhost:3000"],
+    credentials: true
+}));
 
-// body parser
+// ==========================================================================
+// Body Parsers
+// ==========================================================================
+
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}))
+app.use(express.urlencoded({ extended: true }));
 
 // Fix for Express 5: make req.query writable before mongo-sanitize
 app.use((req, res, next) => {
-  Object.defineProperty(req, 'query', {
-    value: req.query,
-    writable: true,
-    configurable: true
-  });
-  next();
+    Object.defineProperty(req, 'query', {
+        value: req.query,
+        writable: true,
+        configurable: true
+    });
+    next();
 });
 
-// mongo sanitize prevents from sql attacks through query
-// app.use(mongoSanitize())
-// app.use(
-//   mongoSanitize({
-//     replaceWith: "_"
-//   })
-// );
-app.use(
-  mongoSanitize({
-    allowDots: true,
-    replaceWith: "_"
-  })
-);
-app.use(xss())
-// prevent http parameter pollution
-app.use(hpp())
+// ==========================================================================
+// Data Sanitization & Protection
+// ==========================================================================
 
-// logging
+// Mongo Sanitize - Prevents SQL injection through query params
 app.use(
-    morgan("combined",{
-        stream:{
-            write: (message)=>logger.info(message.trim())
+    mongoSanitize({
+        allowDots: true,
+        replaceWith: "_"
+    })
+);
+
+// XSS Clean - Prevents cross-site scripting attacks
+app.use(xss());
+
+// HPP - Prevents HTTP parameter pollution
+app.use(hpp());
+
+// ==========================================================================
+// Logging Configuration
+// ==========================================================================
+
+app.use(
+    morgan("combined", {
+        stream: {
+            write: (message) => logger.info(message.trim())
         }
     })
 );
 
-// auth0
-app.use(auth0)
-// rate limiting prevents brute force attacks
-const limiter = rateLimit({
-    windowMs:15*60*1000,
-    max:100
-})
-app.get("/profile", (req, res) => {
-  if (!req.oidc.isAuthenticated()) {
-    return res.status(401).json({ message: "Not logged in" });
-  }
+// ==========================================================================
+// Authentication
+// ==========================================================================
 
-  res.json(req.oidc.user);
+app.use(auth0);
+
+// ==========================================================================
+// Rate Limiting
+// ==========================================================================
+
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100
 });
-// here is the link of public folder where it is exist html and css file
-app.use(express.static("./public"))
-// users routes are called here
-app.use("/api", limiter ,userRoutes)
-// here is the router for organization
-app.use("/api", orgRoutes)
-// here are the routes for organization member
-app.use("/api", orgMemRoutes)
+
+// ==========================================================================
+// Static Files
+// ==========================================================================
+
+app.use(express.static("./public"));
+
+// ==========================================================================
+// API Routes
+// ==========================================================================
+
+// User routes
+app.use("/api", limiter, userRoutes);
+
+// Organization routes
+app.use("/api", orgRoutes);
+
+// Organization member routes
+app.use("/api", orgMemRoutes);
+
+// Expense routes
+app.use("/api", expenseRoutes);
+
+// ==========================================================================
+// Profile Route
+// ==========================================================================
+
+app.get("/profile", (req, res) => {
+    if (!req.oidc.isAuthenticated()) {
+        return res.status(401).json({ message: "Not logged in" });
+    }
+
+    res.json(req.oidc.user);
+});
+
+// ==========================================================================
+// Error Handling Middleware
+// ==========================================================================
+
 app.use((err, req, res, next) => {
-    console.error(err);     // or logger.error(err)
+    console.error(err);
+
+    logger.error({
+        message: err.message,
+        stack: err.stack,
+        statusCode: err.statusCode || 500,
+        path: req.originalUrl,
+        method: req.method
+    });
 
     res.status(err.statusCode || 500).json({
         status: "error",
@@ -95,6 +151,6 @@ app.use((err, req, res, next) => {
     });
 });
 
-
+// ==========================================================================
 
 module.exports = app;

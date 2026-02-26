@@ -1,14 +1,54 @@
-// this is the module for writing routes for organization
+// ==========================================================================
+// Organization Routes - Organization Management Endpoints
+// ==========================================================================
 
 const express = require("express");
-const { orgsController } = require("../controllers");
 const router = express.Router();
 
+// ----------------------------- Controllers -----------------------------
+const { orgsController } = require("../controllers");
+const { createOrUpdateOrganizationValidator, organizationIdParamValidator } = require("../validators/organization.validator");
+const { protect } = require("../middleware/auth.middleware");
 
-router.post("/orgs", orgsController.createOrg);
-router.get("/orgs", orgsController.getAllOrgs);
-router.get("/orgs/:id", orgsController.getOne)
-router.put("/orgs/:id", orgsController.updateOne)
-router.delete("/orgs/:id", orgsController.deleteOrg)
+// ==========================================================================
+// Routes
+// ==========================================================================
+
+// Create new organization
+router.post("/orgs",
+    protect,
+    createOrUpdateOrganizationValidator,
+    orgsController.createOrg
+);
+
+// Get all organizations
+router.get("/orgs",
+    protect,
+    orgsController.getAllOrgs
+);
+
+// Get organization by ID
+router.get("/orgs/:id",
+    protect, 
+    organizationIdParamValidator, 
+    orgsController.getOne
+);
+
+// Update organization by ID
+router.put("/orgs/:id",
+    protect, 
+    createOrUpdateOrganizationValidator, 
+    organizationIdParamValidator, 
+    orgsController.updateOne
+);
+
+// Delete organization by ID
+router.delete("/orgs/:id", 
+    protect, 
+    organizationIdParamValidator, 
+    orgsController.deleteOrg
+);
+
+// ==========================================================================
 
 module.exports = router;

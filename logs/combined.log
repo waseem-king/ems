@@ -120,3 +120,253 @@
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-02-24T10:43:13.339Z"}
 {"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-24T10:45:15.314Z"}
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-02-24T10:45:15.332Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-24T15:46:10.506Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-24T15:46:10.517Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-24T16:05:51.418Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-24T16:05:51.426Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-24T17:12:08.040Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-24T17:12:08.044Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-24T17:19:11.748Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-24T17:19:11.751Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-24T17:26:15.197Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-24T17:26:15.201Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T06:34:34.586Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T06:34:34.599Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T06:40:06.873Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T06:40:06.881Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T06:40:39.082Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T06:40:39.092Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T06:40:56.602Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T06:40:56.617Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T06:43:34.526Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T06:43:34.536Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T06:45:54.471Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T06:45:54.496Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T06:46:36.796Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T06:46:36.806Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T06:46:52.229Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T06:46:52.246Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T06:56:05.795Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T06:56:05.809Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T06:58:04.624Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T06:58:04.640Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:07:37.730Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:07:37.743Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:23:01.218Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:23:01.229Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:26:06.681Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:26:06.693Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:27:35.373Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:27:35.388Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:31:19.167Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:31:19.189Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:35:40.604Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:35:40.615Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:07:38:15 +0000] \"POST /api/users HTTP/1.1\" 400 173 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T07:38:15.757Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:07:39:48 +0000] \"POST /api/users HTTP/1.1\" 400 173 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T07:39:48.929Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:44:36.521Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:44:36.530Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:45:52.198Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:45:52.237Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:07:46:35 +0000] \"POST /api/users HTTP/1.1\" 400 173 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T07:46:35.106Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:47:18.216Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:47:18.254Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:07:47:22 +0000] \"POST /api/users HTTP/1.1\" 200 504 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T07:47:22.804Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:56:34.968Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:56:34.981Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:56:39.784Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:56:39.799Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:07:58:27 +0000] \"POST /api/users HTTP/1.1\" 400 342 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T07:58:27.198Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:59:05.653Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:59:05.677Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:59:15.169Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:59:15.215Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T07:59:38.085Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T07:59:38.120Z"}
+{"level":"error","message":"Cannot destructure property 'email' of 'req.body' as it is undefined.","method":"POST","path":"/api/user","stack":"TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.\n    at E:\\ems\\src\\controllers\\user.controller.js:19:17\n    at E:\\ems\\src\\utils\\asyncHandler.js:3:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at module.exports (E:\\ems\\src\\middleware\\validate.js:13:3)\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\ems\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\ems\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)","statusCode":500,"timestamp":"2026-02-25T07:59:39.184Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:07:59:39 +0000] \"POST /api/user HTTP/1.1\" 500 100 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T07:59:39.205Z"}
+{"level":"error","message":"Illegal arguments: number, string","method":"POST","path":"/api/user","stack":"Error: Illegal arguments: number, string\n    at _async (E:\\ems\\node_modules\\bcryptjs\\umd\\index.js:305:15)\n    at E:\\ems\\node_modules\\bcryptjs\\umd\\index.js:335:11\n    at new Promise (<anonymous>)\n    at Object.compare (E:\\ems\\node_modules\\bcryptjs\\umd\\index.js:334:16)\n    at userSchema.methods.comparePassword (E:\\ems\\src\\models\\user.model.js:65:19)\n    at UserServices.loginUser (E:\\ems\\src\\services\\user.services.js:22:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async E:\\ems\\src\\controllers\\user.controller.js:24:22","statusCode":500,"timestamp":"2026-02-25T08:01:30.135Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:01:30 +0000] \"POST /api/user HTTP/1.1\" 500 64 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:01:30.143Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:01:42 +0000] \"POST /api/user HTTP/1.1\" 200 513 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:01:42.220Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T08:23:53.825Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T08:23:53.837Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:28:15 +0000] \"POST /api/expenses HTTP/1.1\" 404 152 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:28:15.178Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T08:28:57.484Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T08:28:57.506Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:29:00 +0000] \"POST /api/expenses HTTP/1.1\" 404 152 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:29:00.759Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:29:36 +0000] \"POST /api/expenses HTTP/1.1\" 404 152 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:29:36.904Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:30:33 +0000] \"POST /api/expenses HTTP/1.1\" 404 152 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:30:33.251Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T08:31:25.828Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T08:31:25.837Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:31:29 +0000] \"POST /api/expenses HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:31:29.714Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:31:47 +0000] \"POST /api/expenses HTTP/1.1\" 200 319 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:31:47.847Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T08:35:19.056Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T08:35:19.060Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:35:58 +0000] \"POST /api/expense HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:35:58.383Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T08:36:52.582Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T08:36:52.586Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:36:55 +0000] \"POST /api/expense HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:36:55.470Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T08:37:27.388Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T08:37:27.393Z"}
+{"level":"error","message":"Expense Not Found","method":"POST","path":"/api/expense","stack":"Error: Expense Not Found\n    at E:\\ems\\src\\controllers\\expense.controller.js:24:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":404,"timestamp":"2026-02-25T08:37:29.776Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:37:29 +0000] \"POST /api/expense HTTP/1.1\" 404 48 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:37:29.782Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T08:39:58.640Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T08:39:58.644Z"}
+{"level":"error","message":"Expense Not Found","method":"GET","path":"/api/expenses","stack":"Error: Expense Not Found\n    at E:\\ems\\src\\controllers\\expense.controller.js:24:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":404,"timestamp":"2026-02-25T08:40:12.331Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:40:12 +0000] \"GET /api/expenses HTTP/1.1\" 404 48 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:40:12.335Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:40:48 +0000] \"POST /api/expenses/699eb373f33023ab5b8f5ae6 HTTP/1.1\" 200 319 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:40:48.868Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:41:48 +0000] \"POST /api/expenses/699eb373f33023ab5b8f5ae6 HTTP/1.1\" 200 319 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:41:48.267Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:43:46 +0000] \"POST /api/expenses/699eb373f33023ab5b8f5ae6 HTTP/1.1\" 200 319 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:43:46.692Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:43:57 +0000] \"PUT /api/expenses/699eb373f33023ab5b8f5ae6 HTTP/1.1\" 200 330 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:43:57.967Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:49:06 +0000] \"POST /api/users HTTP/1.1\" 200 672 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:49:06.779Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:50:18 +0000] \"POST /api/user HTTP/1.1\" 200 681 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:50:18.213Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:53:36 +0000] \"POST /api/expenses HTTP/1.1\" 200 336 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:53:36.819Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T08:56:18.451Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T08:56:18.455Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:56:25 +0000] \"POST /api/expenses HTTP/1.1\" 200 317 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:56:25.302Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T08:56:47.598Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T08:56:47.607Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:56:50 +0000] \"POST /api/expenses HTTP/1.1\" 200 344 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:56:50.322Z"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'ownerType')","method":"POST","path":"/api/expenses","stack":"TypeError: Cannot read properties of undefined (reading 'ownerType')\n    at E:\\ems\\src\\controllers\\expense.controller.js:9:27\n    at E:\\ems\\src\\utils\\asyncHandler.js:3:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:35:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-02-25T08:59:13.907Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:08:59:13 +0000] \"POST /api/expenses HTTP/1.1\" 500 88 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T08:59:13.909Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T09:01:29.510Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T09:01:29.515Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:01:32 +0000] \"POST /api/expenses HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:01:32.703Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:02:28 +0000] \"POST /api/expenses HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:02:28.943Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:03:04 +0000] \"POST /api/user HTTP/1.1\" 200 681 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:03:04.574Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:03:37 +0000] \"GET /api/expenses HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:03:37.196Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T09:07:59.594Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T09:07:59.597Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T09:11:16.856Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T09:11:16.862Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:11:23 +0000] \"GET /api/expenses HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:11:23.499Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:11:37 +0000] \"POST /api/user HTTP/1.1\" 200 681 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:11:37.348Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:12:03 +0000] \"GET /api/expenses HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:12:03.581Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:13:04 +0000] \"POST /api/expenses HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:13:04.111Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:13:16 +0000] \"POST /api/expenses HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:13:16.097Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T09:13:51.551Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T09:13:51.555Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:13:57 +0000] \"POST /api/expenses HTTP/1.1\" 200 344 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:13:57.914Z"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'ownerType')","method":"GET","path":"/api/expenses","stack":"TypeError: Cannot read properties of undefined (reading 'ownerType')\n    at E:\\ems\\src\\controllers\\expense.controller.js:22:29\n    at E:\\ems\\src\\utils\\asyncHandler.js:3:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:35:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-02-25T09:14:07.658Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:14:07 +0000] \"GET /api/expenses HTTP/1.1\" 500 88 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:14:07.660Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T09:15:21.345Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T09:15:21.350Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T09:17:21.930Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T09:17:21.942Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T09:18:09.887Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T09:18:09.892Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:18:35 +0000] \"GET /api/expenses HTTP/1.1\" 200 663 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:18:35.265Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T09:20:02.935Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T09:20:02.939Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:20:35 +0000] \"GET /api/expenses/699ebd55a046e667b7606839 HTTP/1.1\" 200 344 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:20:35.192Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:22:06 +0000] \"GET /api/expenses/699ebd55a046e667b7606839 HTTP/1.1\" 200 344 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:22:06.266Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:09:22:17 +0000] \"PUT /api/expenses/699ebd55a046e667b7606839 HTTP/1.1\" 200 344 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T09:22:17.422Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T10:02:38.763Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T10:02:38.780Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:10:22:28 +0000] \"POST /api/expenses HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T10:22:28.279Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:10:23:51 +0000] \"POST /api/user HTTP/1.1\" 200 583 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T10:23:51.302Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:10:24:18 +0000] \"POST /api/expenses HTTP/1.1\" 200 812 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T10:24:18.481Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T11:10:41.067Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T11:10:41.076Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T11:28:43.084Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T11:28:43.107Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-25T11:47:58.601Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-25T11:47:58.613Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:11:49:57 +0000] \"PUT /api/expenses/699eb373f33023ab5b8f5ae6 HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T11:49:57.478Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:11:50:09 +0000] \"POST /api/user HTTP/1.1\" 200 583 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T11:50:09.713Z"}
+{"level":"info","message":"::1 - - [25/Feb/2026:11:50:39 +0000] \"PUT /api/expenses/699eb373f33023ab5b8f5ae6 HTTP/1.1\" 200 758 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-25T11:50:39.619Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T06:20:27.954Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T06:20:27.962Z"}
+{"level":"info","message":"::1 - - [26/Feb/2026:06:32:46 +0000] \"GET /health HTTP/1.1\" 404 145 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36\"","timestamp":"2026-02-26T06:32:46.834Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:25:53.815Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:25:53.819Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:27:45.669Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:27:45.673Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:28:04.782Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:28:04.786Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:30:37.460Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:30:37.465Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:30:45.667Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:30:45.679Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:31:07.991Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:31:08.001Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:31:29.759Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:31:29.763Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:32:21.547Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:32:21.552Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:32:53.045Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:32:53.050Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:37:42.384Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:37:42.395Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:39:31.646Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:39:31.657Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:39:44.601Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:39:44.605Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:40:13.572Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:40:13.576Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:40:36.449Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:40:36.453Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:41:57.642Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:41:57.647Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:42:12.739Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:42:12.743Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:42:28.555Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:42:28.559Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:42:41.568Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:42:41.571Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:43:01.126Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:43:01.137Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:43:27.330Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:43:27.334Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:43:39.969Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:43:39.979Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:44:04.613Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:44:04.626Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:44:17.489Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:44:17.499Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:44:54.743Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:44:54.753Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:45:15.198Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:45:15.203Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:45:28.066Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:45:28.070Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:45:42.691Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:45:42.695Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:45:58.588Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:45:58.591Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:46:12.194Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:46:12.199Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:46:33.903Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:46:33.915Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:46:49.661Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:46:49.672Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:47:26.460Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:47:26.471Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:47:59.477Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:47:59.487Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:48:21.557Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:48:21.561Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:48:56.672Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:48:56.676Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T07:49:02.357Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T07:49:02.361Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T08:33:20.273Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T08:33:20.291Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T08:33:38.438Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T08:33:38.447Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T08:57:52.317Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T08:57:52.327Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T09:11:55.250Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T09:11:55.260Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T09:31:42.109Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T09:31:42.132Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T09:46:05.108Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T09:46:05.121Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T09:54:49.790Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T09:54:49.801Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T09:59:38.565Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T09:59:38.577Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T10:01:44.989Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T10:01:45.015Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T10:02:08.744Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T10:02:08.772Z"}

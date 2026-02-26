@@ -1,15 +1,25 @@
-const { createLogger, format, transports} = require("winston")
+// ==========================================================================
+// Logger Configuration - Winston Logger Setup
+// ==========================================================================
+
+// ----------------------------- Dependencies -----------------------------
+const { createLogger, format, transports } = require("winston");
+
+// ==========================================================================
 
 const logger = createLogger({
-    level:"info",
-    format:format.combine(
+    level: "info",
+    format: format.combine(
         format.timestamp(),
         format.json()
     ),
-    transports:[
+    transports: [
         new transports.Console(),
-        new transports.File({ filename:"logs/error.log", level:"error"}),
-        new transports.File({ filename:"logs/combined.log"})
+        new transports.File({ filename: "logs/error.log", level: "error" }),
+        new transports.File({ filename: "logs/combined.log" })
     ]
 });
+
+// ==========================================================================
+
 module.exports = logger;
