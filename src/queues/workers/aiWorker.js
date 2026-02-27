@@ -7,6 +7,7 @@ const logger = require("../../config/logger");
 const connection = new IORedis({
   host: process.env.REDIS_HOST || '127.0.0.1',
   port: process.env.REDIS_PORT || 6379,
+  maxRetriesPerRequest: null, // Critical for BullMQ compatibility
 });
 
 // worker to process ai categorization
@@ -20,7 +21,7 @@ const aiWorker = new Worker(
             await expenseModel.updateOne({ _id:expenseId }, { category });
             logger.write(`Expense ${expenseId} categorized as ${category}`)
         } catch (error) {
-            logger.error(`Failed to categorize expense ${expenseId}:`, err);
+            logger.error(`Failed to categorize expense ${expenseId}:`, error);
             throw error;
         }
     },

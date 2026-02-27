@@ -22,7 +22,7 @@ const morgan = require("morgan");
 const logger = require("./config/logger");
 const auth0 = require("./config/auth0");
 const userRoutes = require("./routes/user.routes");
-const { orgRoutes, orgMemRoutes, expenseRoutes } = require("./routes");
+const { orgRoutes, orgMemRoutes, expenseRoutes, budgetRoutes } = require("./routes");
 
 // ==========================================================================
 // Security Middleware
@@ -120,6 +120,9 @@ app.use("/api", orgMemRoutes);
 
 // Expense routes
 app.use("/api", expenseRoutes);
+
+// Budget routes
+app.use("/api", budgetRoutes)
 
 // ==========================================================================
 // Profile Route

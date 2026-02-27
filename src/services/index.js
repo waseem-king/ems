@@ -3,6 +3,7 @@
 // ==========================================================================
 
 const authService = require("./auth.service");
+const budgetServices = require("./budget.services");
 const expenseServices = require("./expense.services");
 const orgMemServices = require("./orgMem.services");
 const orgsServices = require("./orgs.services");
@@ -16,4 +17,5 @@ module.exports = {
     orgMemServices,
     userServices,
     expenseServices,
+    budgetServices,
 };

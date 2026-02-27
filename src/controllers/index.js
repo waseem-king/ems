@@ -3,6 +3,7 @@
 // ==========================================================================
 
 const authController = require("./auth.controller");
+const budgetController = require("./budget.controller");
 const expenseController = require("./expense.controller");
 const orgMemController = require("./orgMem.controller");
 const orgsController = require("./orgs.controller");
@@ -16,4 +17,5 @@ module.exports = {
     orgMemController,
     userController,
     expenseController,
+    budgetController
 };

@@ -38,7 +38,7 @@ class UserController {
             throw new AppError("User not found", 404);
         }
 
-        res.json({ status: "success", data: user, token: user.token });
+        res.json({ status: "success", data: user});
     });
 
 

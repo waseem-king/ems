@@ -392,3 +392,59 @@
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T15:08:19.118Z"}
 {"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-26T15:08:37.256Z"}
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-02-26T15:08:37.264Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T11:16:08.933Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T11:16:08.943Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T11:16:27.278Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T11:16:27.286Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T11:17:29.041Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T11:17:29.060Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T11:19:55.878Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T11:19:55.889Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T11:21:27.246Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T11:21:27.256Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T11:21:35.703Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T11:21:35.720Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T11:29:17.416Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T11:29:17.426Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T11:29:41.582Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T11:29:41.592Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T11:29:59.841Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T11:29:59.858Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T15:14:17.423Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T15:14:17.427Z"}
+{"level":"error","message":"Invalid credentials","method":"POST","path":"/api/user","stack":"Error: Invalid credentials\n    at UserServices.loginUser (E:\\ems\\src\\services\\user.services.js:35:19)\n    at async E:\\ems\\src\\controllers\\user.controller.js:35:22","statusCode":401,"timestamp":"2026-02-27T15:30:04.888Z"}
+{"level":"info","message":"::1 - - [27/Feb/2026:15:30:04 +0000] \"POST /api/user HTTP/1.1\" 401 50 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:30:04.892Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T15:32:18.548Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T15:32:18.552Z"}
+{"level":"info","message":"::1 - - [27/Feb/2026:15:32:24 +0000] \"POST /api/user HTTP/1.1\" 200 738 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:32:24.472Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T15:33:27.082Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T15:33:27.087Z"}
+{"level":"info","message":"::1 - - [27/Feb/2026:15:33:31 +0000] \"POST /api/user HTTP/1.1\" 200 556 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:33:31.577Z"}
+{"level":"info","message":"::1 - - [27/Feb/2026:15:41:25 +0000] \"POST /api/budget HTTP/1.1\" 404 150 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:41:25.490Z"}
+{"level":"error","message":"Budget for this month already exist you can only update it","method":"POST","path":"/api/budgets","stack":"Error: Budget for this month already exist you can only update it\n    at BudgetRepo.setBudget (E:\\ems\\src\\repositories\\budget.repository.js:10:19)\n    at BudgetService.setBudget (E:\\ems\\src\\services\\budget.services.js:5:51)\n    at E:\\ems\\src\\controllers\\budget.controller.js:7:47\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at middleware (E:\\ems\\node_modules\\express-validator\\lib\\middlewares\\check.js:16:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":401,"timestamp":"2026-02-27T15:42:12.594Z"}
+{"level":"info","message":"::1 - - [27/Feb/2026:15:42:12 +0000] \"POST /api/budgets HTTP/1.1\" 401 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:42:12.596Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T15:43:49.862Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T15:43:49.867Z"}
+{"level":"error","message":"Budget for this month already exist you can only update it","method":"POST","path":"/api/budgets","stack":"Error: Budget for this month already exist you can only update it\n    at BudgetRepo.setBudget (E:\\ems\\src\\repositories\\budget.repository.js:10:19)\n    at BudgetService.setBudget (E:\\ems\\src\\services\\budget.services.js:5:51)\n    at E:\\ems\\src\\controllers\\budget.controller.js:7:47\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at middleware (E:\\ems\\node_modules\\express-validator\\lib\\middlewares\\check.js:16:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":401,"timestamp":"2026-02-27T15:43:55.009Z"}
+{"level":"info","message":"::1 - - [27/Feb/2026:15:43:55 +0000] \"POST /api/budgets HTTP/1.1\" 401 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:43:55.013Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T15:44:31.966Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T15:44:31.970Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T15:45:06.471Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T15:45:06.477Z"}
+{"level":"error","message":"Budget for this month already exist you can only update it","method":"POST","path":"/api/budgets","stack":"Error: Budget for this month already exist you can only update it\n    at BudgetRepo.setBudget (E:\\ems\\src\\repositories\\budget.repository.js:12:19)\n    at BudgetService.setBudget (E:\\ems\\src\\services\\budget.services.js:5:51)\n    at E:\\ems\\src\\controllers\\budget.controller.js:7:47\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at middleware (E:\\ems\\node_modules\\express-validator\\lib\\middlewares\\check.js:16:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":401,"timestamp":"2026-02-27T15:45:13.774Z"}
+{"level":"info","message":"::1 - - [27/Feb/2026:15:45:13 +0000] \"POST /api/budgets HTTP/1.1\" 401 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:45:13.782Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T15:45:42.347Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T15:45:42.352Z"}
+{"level":"error","message":"Budget for this month already exist you can only update it","method":"POST","path":"/api/budgets","stack":"Error: Budget for this month already exist you can only update it\n    at BudgetRepo.setBudget (E:\\ems\\src\\repositories\\budget.repository.js:12:19)\n    at BudgetService.setBudget (E:\\ems\\src\\services\\budget.services.js:5:51)\n    at E:\\ems\\src\\controllers\\budget.controller.js:7:47\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at middleware (E:\\ems\\node_modules\\express-validator\\lib\\middlewares\\check.js:16:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":401,"timestamp":"2026-02-27T15:45:45.465Z"}
+{"level":"info","message":"::1 - - [27/Feb/2026:15:45:45 +0000] \"POST /api/budgets HTTP/1.1\" 401 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:45:45.469Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T15:47:03.998Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T15:47:04.003Z"}
+{"level":"info","message":"::1 - - [27/Feb/2026:15:47:11 +0000] \"POST /api/budgets HTTP/1.1\" 201 178 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:47:11.030Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T15:52:22.948Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T15:52:22.953Z"}
+{"level":"error","message":"Budget for this month already exist you can only update it","method":"POST","path":"/api/budgets","stack":"Error: Budget for this month already exist you can only update it\n    at BudgetRepo.setBudget (E:\\ems\\src\\repositories\\budget.repository.js:14:19)\n    at BudgetService.setBudget (E:\\ems\\src\\services\\budget.services.js:5:51)\n    at E:\\ems\\src\\controllers\\budget.controller.js:7:47\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at middleware (E:\\ems\\node_modules\\express-validator\\lib\\middlewares\\check.js:16:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":401,"timestamp":"2026-02-27T15:52:27.991Z"}
+{"level":"info","message":"::1 - - [27/Feb/2026:15:52:27 +0000] \"POST /api/budgets HTTP/1.1\" 401 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:52:27.998Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T15:54:21.666Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T15:54:21.670Z"}
+{"level":"error","message":"Budget for this month already exist you can only update it","method":"POST","path":"/api/budgets","stack":"Error: Budget for this month already exist you can only update it\n    at BudgetRepo.setBudget (E:\\ems\\src\\repositories\\budget.repository.js:14:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async BudgetService.setBudget (E:\\ems\\src\\services\\budget.services.js:5:28)\n    at async E:\\ems\\src\\controllers\\budget.controller.js:7:26","statusCode":401,"timestamp":"2026-02-27T15:54:28.768Z"}
+{"level":"info","message":"::1 - - [27/Feb/2026:15:54:28 +0000] \"POST /api/budgets HTTP/1.1\" 401 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:54:28.773Z"}

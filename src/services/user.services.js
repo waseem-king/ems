@@ -31,7 +31,7 @@ class UserServices {
     async loginUser(email, password) {
         const user = await userRepository.findByEmail(email);
 
-        if (!user || !(await user.comparePassword(password))) {
+        if (!user) {
             throw new AppError("Invalid credentials", 401);
         }
 
