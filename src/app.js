@@ -6,6 +6,9 @@
 const express = require("express");
 const app = express();
 
+// ----------------------------- BullMQ dashboard ------------------------------
+const bullBoardRouter  = require("./queues/monitor")
+
 // ----------------------------- Security & Middleware -------------------------
 const helmet = require("helmet");
 const cors = require("cors");
@@ -129,6 +132,12 @@ app.get("/profile", (req, res) => {
 
     res.json(req.oidc.user);
 });
+
+// ==========================================================================
+// BullMQ dashboard 
+// ==========================================================================
+
+app.use('/admin/queues', bullBoardRouter);
 
 // ==========================================================================
 // Error Handling Middleware

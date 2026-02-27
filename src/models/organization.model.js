@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const organizationSchema = new mongoose.Schema({
     name: { type: String, required: true },
-
+    slug:{ type:String, require:true},
     type: {
         type: String,
         enum: ["business", "school", "hospital", "ngo"]

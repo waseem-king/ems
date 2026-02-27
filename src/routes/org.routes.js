@@ -7,7 +7,10 @@ const router = express.Router();
 
 // ----------------------------- Controllers -----------------------------
 const { orgsController } = require("../controllers");
-const { createOrUpdateOrganizationValidator, organizationIdParamValidator } = require("../validators/organization.validator");
+const {
+  createOrUpdateOrganizationValidator,
+  organizationIdParamValidator,
+} = require("../validators/organization.validator");
 const { protect } = require("../middleware/auth.middleware");
 
 // ==========================================================================
@@ -15,38 +18,39 @@ const { protect } = require("../middleware/auth.middleware");
 // ==========================================================================
 
 // Create new organization
-router.post("/orgs",
-    protect,
-    createOrUpdateOrganizationValidator,
-    orgsController.createOrg
+router.post(
+  "/orgs",
+  protect,
+  createOrUpdateOrganizationValidator,
+  orgsController.createOrg,
 );
 
 // Get all organizations
-router.get("/orgs",
-    protect,
-    orgsController.getAllOrgs
-);
+router.get("/orgs", protect, orgsController.getAllOrgs);
 
 // Get organization by ID
-router.get("/orgs/:id",
-    protect, 
-    organizationIdParamValidator, 
-    orgsController.getOne
+router.get(
+  "/orgs/:id",
+  protect,
+  organizationIdParamValidator,
+  orgsController.getOne,
 );
 
 // Update organization by ID
-router.put("/orgs/:id",
-    protect, 
-    createOrUpdateOrganizationValidator, 
-    organizationIdParamValidator, 
-    orgsController.updateOne
+router.put(
+  "/orgs/:id",
+  protect,
+  createOrUpdateOrganizationValidator,
+  organizationIdParamValidator,
+  orgsController.updateOne,
 );
 
 // Delete organization by ID
-router.delete("/orgs/:id", 
-    protect, 
-    organizationIdParamValidator, 
-    orgsController.deleteOrg
+router.delete(
+  "/orgs/:id",
+  protect,
+  organizationIdParamValidator,
+  orgsController.deleteOrg,
 );
 
 // ==========================================================================
