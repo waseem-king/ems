@@ -7,7 +7,7 @@ const budgetController = require("./budget.controller");
 const expenseController = require("./expense.controller");
 const orgMemController = require("./orgMem.controller");
 const orgsController = require("./orgs.controller");
-const userController = require("./user.controller");
+const {userController, UserAnalyticsController} = require("./user.controller");
 
 // ==========================================================================
 
@@ -16,6 +16,7 @@ module.exports = {
     orgsController,
     orgMemController,
     userController,
+    UserAnalyticsController,
     expenseController,
     budgetController
 };

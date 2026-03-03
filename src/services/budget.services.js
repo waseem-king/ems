@@ -14,6 +14,13 @@ class BudgetService{
             const budget = await budgetRepository.updateBudget(ownerId, bdgtId, data)
             return budget;
         }
+
+// =====================================================================
+                // Budget Aggregation 
+// =====================================================================
+        async getBudgetDashboard(ownerType, ownerId){
+            return await budgetRepository.getBudgetDashboard(ownerType, ownerId);
+        }
 }
 
 module.exports = new BudgetService;

@@ -3,6 +3,7 @@
 // ==========================================================================
 
 // ----------------------------- Dependencies -----------------------------
+const { default: mongoose } = require("mongoose");
 const AppError = require("../middleware/appError");
 const { orgsServices } = require("../services");
 const asyncHandler = require("../utils/asyncHandler");
@@ -51,6 +52,13 @@ class OrgsController {
     // ----------------------------- Delete Organization -----------------------------
     deleteOrg = asyncHandler(async (req, res) => {
         const data = await orgsServices.deleteOrg(req.params.id);
+        res.json({ status: "success", data: data });
+    });
+
+    ////////////////////////////////    ORG AGGREGATION CONTROLLER ///////////////////////////////////////
+    orgDashboard = asyncHandler(async (req, res) => {
+        const orgId = new mongoose.Types.ObjectId(req.user.id)
+        const data = await orgsServices.getOrgDashboard(orgId)
         res.json({ status: "success", data: data });
     });
 }

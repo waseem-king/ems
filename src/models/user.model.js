@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Organization",
     },
+    ownerType:{
+        type:String,
+        default:"user"
+    },
     // in the case organization create their own organization member using this user schema
     role: {
         type: String,

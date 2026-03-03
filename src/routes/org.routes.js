@@ -25,6 +25,12 @@ router.post(
   orgsController.createOrg,
 );
 
+///////////////////////////////// ORG AGGREGATION ROUTES ////////////////////////////////////
+router.get(
+  "/orgs/orgDashboard",
+  protect,
+  orgsController.orgDashboard
+)
 // Get all organizations
 router.get("/orgs", protect, orgsController.getAllOrgs);
 
@@ -52,6 +58,8 @@ router.delete(
   organizationIdParamValidator,
   orgsController.deleteOrg,
 );
+
+
 
 // ==========================================================================
 

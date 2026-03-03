@@ -3,8 +3,10 @@
 // ==========================================================================
 
 // ----------------------------- Dependencies -----------------------------
+const mongoose = require("mongoose")
+const logger = require("../config/logger");
 const AppError = require("../middleware/appError");
-const { userServices } = require("../services");
+const { UserServices, UserAnalyticsServices } = require("../services");
 const asyncHandler = require("../utils/asyncHandler");
 
 // ==========================================================================
@@ -14,7 +16,7 @@ class UserController {
     // ----------------------------- Create User -----------------------------
     createUser = asyncHandler(async (req, res) => {
         const data = req.body;
-        const { user, token } = await userServices.createUser(data);
+        const { user, token } = await UserServices.createUser(data);
 
         if (!user) {
             throw new AppError("User could not be created", 400);
@@ -32,7 +34,7 @@ class UserController {
             throw new AppError("Email or password not provided", 400);
         }
 
-        const user = await userServices.loginUser(req.body.email, req.body.password);
+        const user = await UserServices.loginUser(req.body.email, req.body.password);
 
         if (!user) {
             throw new AppError("User not found", 404);
@@ -44,7 +46,7 @@ class UserController {
 
     // ----------------------------- Get User by ID -----------------------------
     findExistingUser = asyncHandler(async (req, res) => {
-        const user = await userServices.findExistingUser(req.params.id);
+        const user = await UserServices.findExistingUser(req.params.id);
 
         if (!user) {
             throw new AppError("User not found", 404);
@@ -56,7 +58,7 @@ class UserController {
 
     // ----------------------------- Get All Users -----------------------------
     findAll = asyncHandler(async (req, res) => {
-        const user = await userServices.findAll();
+        const user = await UserServices.findAll();
 
         if (!user) {
             throw new AppError("User not found", 404);
@@ -71,7 +73,7 @@ class UserController {
         const email = req.query;
 
         if (email) {
-            const user = await userServices.findByEmail(email);
+            const user = await UserServices.findByEmail(email);
 
             if (!user) {
                 throw new AppError("User not found", 404);
@@ -86,13 +88,13 @@ class UserController {
 
     // ----------------------------- Update User by ID -----------------------------
     updateById = asyncHandler(async (req, res) => {
-        const user = await userServices.findExistingUser(req.params.id);
+        const user = await UserServices.findExistingUser(req.params.id);
 
         if (!user) {
             throw new AppError("User not found", 404);
         }
 
-        const newUser = await userServices.updateById(req.params.id, req.body);
+        const newUser = await UserServices.updateById(req.params.id, req.body);
 
         if (!newUser) {
             throw new AppError("User not found", 404);
@@ -104,13 +106,13 @@ class UserController {
 
     // ----------------------------- Delete User by ID -----------------------------
     deleteById = asyncHandler(async (req, res) => {
-        const user = await userServices.findExistingUser(req.params.id);
+        const user = await UserServices.findExistingUser(req.params.id);
 
         if (!user) {
             throw new AppError("User not found", 404);
         }
 
-        const message = await userServices.deleteById(req.params.id);
+        const message = await UserServices.deleteById(req.params.id);
 
         if (!message) {
             throw new AppError("User not found", 404);
@@ -121,5 +123,19 @@ class UserController {
 }
 
 // ==========================================================================
+                    // User Aggregations controller class
+// ==========================================================================
 
-module.exports = new UserController();
+class UserAnalyticsController{
+    myDashboard = asyncHandler( async (req, res)=>{
+        const userId = new mongoose.Types.ObjectId(req.user.id)
+        const { month, year } = req.body;
+        const response = await UserAnalyticsServices.showtUserDashboard(userId, month, year)
+        res.status(200).json({ status:"success", data:response})
+    })
+}
+
+module.exports = {
+    userController: new UserController(),
+    UserAnalyticsController: new UserAnalyticsController()
+}

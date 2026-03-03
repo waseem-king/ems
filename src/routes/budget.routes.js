@@ -11,6 +11,13 @@ router.post("/budgets",
     budgetController.setMyBudget
 );
 
+////////////////////////////////////// ORG AGG ROUTE ///////////////////////////////////
+router.get(
+    "/budgets/budgetDashboard",
+    protect,
+    budgetController.budgetDashboard
+)
+
 router.get("/budgets/:id",
     protect,
     budgetIdParamValidator,

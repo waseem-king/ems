@@ -4,7 +4,7 @@
 
 // ----------------------------- Dependencies -----------------------------
 const jwt = require("jsonwebtoken");
-const userRepository = require("../repositories/user.repository");
+const { UserRepository }= require("../repositories/user.repository");
 
 // ==========================================================================
 
@@ -30,7 +30,7 @@ const protect = async (req, res, next) => {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         // 4️⃣ Get user from DB
-        const user = await userRepository.findExistingUser(decoded.id);
+        const user = await UserRepository.findExistingUser(decoded.id);
 
         if (!user) {
             return res.status(401).json({

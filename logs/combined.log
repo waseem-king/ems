@@ -448,3 +448,260 @@
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T15:54:21.670Z"}
 {"level":"error","message":"Budget for this month already exist you can only update it","method":"POST","path":"/api/budgets","stack":"Error: Budget for this month already exist you can only update it\n    at BudgetRepo.setBudget (E:\\ems\\src\\repositories\\budget.repository.js:14:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async BudgetService.setBudget (E:\\ems\\src\\services\\budget.services.js:5:28)\n    at async E:\\ems\\src\\controllers\\budget.controller.js:7:26","statusCode":401,"timestamp":"2026-02-27T15:54:28.768Z"}
 {"level":"info","message":"::1 - - [27/Feb/2026:15:54:28 +0000] \"POST /api/budgets HTTP/1.1\" 401 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-02-27T15:54:28.773Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-02-27T16:34:36.586Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-27T16:34:36.590Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T07:55:29.923Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T07:55:29.947Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T07:59:58.987Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T07:59:58.996Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:05:03.916Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:05:03.925Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:12:54.000Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:12:54.013Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:13:15.599Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:13:15.606Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:16:44.791Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:16:44.810Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:18:09.017Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:18:09.029Z"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'loginUser')","method":"POST","path":"/api/user","stack":"TypeError: Cannot read properties of undefined (reading 'loginUser')\n    at E:\\ems\\src\\controllers\\user.controller.js:35:41\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at module.exports (E:\\ems\\src\\middleware\\validate.js:24:3)\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\ems\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\ems\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)","statusCode":500,"timestamp":"2026-03-02T08:19:04.340Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:08:19:04 +0000] \"POST /api/user HTTP/1.1\" 500 88 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T08:19:04.368Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:20:37.598Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:20:37.621Z"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'loginUser')","method":"POST","path":"/api/user","stack":"TypeError: Cannot read properties of undefined (reading 'loginUser')\n    at E:\\ems\\src\\controllers\\user.controller.js:35:41\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at module.exports (E:\\ems\\src\\middleware\\validate.js:24:3)\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\ems\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\ems\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)","statusCode":500,"timestamp":"2026-03-02T08:22:09.103Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:08:22:09 +0000] \"POST /api/user HTTP/1.1\" 500 88 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T08:22:09.119Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:24:32.184Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:24:32.191Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:25:54.195Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:25:54.204Z"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'findByEmail')","method":"POST","path":"/api/user","stack":"TypeError: Cannot read properties of undefined (reading 'findByEmail')\n    at UserServices.loginUser (E:\\ems\\src\\services\\user.services.js:32:43)\n    at E:\\ems\\src\\controllers\\user.controller.js:35:41\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at module.exports (E:\\ems\\src\\middleware\\validate.js:24:3)\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\ems\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\ems\\node_modules\\router\\index.js:435:11)","statusCode":500,"timestamp":"2026-03-02T08:25:57.931Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:08:25:57 +0000] \"POST /api/user HTTP/1.1\" 500 90 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T08:25:57.951Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:29:06.500Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:29:06.507Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:08:29:09 +0000] \"POST /api/user HTTP/1.1\" 200 556 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T08:29:09.198Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:08:31:36 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T08:31:36.572Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:08:32:26 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T08:32:26.209Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:34:25.924Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:34:25.936Z"}
+{"level":"error","message":"user is not defined","method":"GET","path":"/api/users/me/monthlyspending","stack":"ReferenceError: user is not defined\n    at UserAnalyticsServices.getMonthlySpending (E:\\ems\\src\\services\\user.services.js:85:61)\n    at E:\\ems\\src\\controllers\\user.controller.js:130:54\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-02T08:34:36.225Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:08:34:36 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 500 50 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T08:34:36.243Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:37:18.764Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:37:18.775Z"}
+{"level":"error","message":"user is not defined","method":"GET","path":"/api/users/me/monthlyspending","stack":"ReferenceError: user is not defined\n    at UserAnalyticsServices.getMonthlySpending (E:\\ems\\src\\services\\user.services.js:85:61)\n    at E:\\ems\\src\\controllers\\user.controller.js:130:54\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-02T08:37:22.497Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:08:37:22 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 500 50 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T08:37:22.520Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T08:39:05.168Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T08:39:05.179Z"}
+{"level":"error","message":"user is not defined","method":"GET","path":"/api/users/me/monthlyspending","stack":"ReferenceError: user is not defined\n    at UserAnalyticsServices.getMonthlySpending (E:\\ems\\src\\services\\user.services.js:85:61)\n    at E:\\ems\\src\\controllers\\user.controller.js:132:54\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-02T08:39:08.190Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:08:39:08 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 500 50 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T08:39:08.209Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T09:00:30.077Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T09:00:30.087Z"}
+{"level":"error","message":"user is not defined","method":"GET","path":"/api/users/me/monthlyspending","stack":"ReferenceError: user is not defined\n    at UserAnalyticsServices.getMonthlySpending (E:\\ems\\src\\services\\user.services.js:85:61)\n    at E:\\ems\\src\\controllers\\user.controller.js:132:54\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-02T09:00:32.870Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:09:00:32 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 500 50 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T09:00:32.900Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T09:03:36.094Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T09:03:36.107Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:09:03:39 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T09:03:39.071Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:09:29.263Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:09:29.274Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:14:53.849Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:14:53.860Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:10:14:57 +0000] \"GET /api/users/me/budgetvsactual HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T10:14:57.691Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:10:15:22 +0000] \"POST /api/user HTTP/1.1\" 200 556 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T10:15:22.205Z"}
+{"level":"error","message":"UserAnalytics.getBudgetVsActual is not a function","method":"GET","path":"/api/users/me/budgetvsactual","stack":"TypeError: UserAnalytics.getBudgetVsActual is not a function\n    at UserAnalyticsServices.getBudgetVsActual (E:\\ems\\src\\services\\user.services.js:89:46)\n    at E:\\ems\\src\\controllers\\user.controller.js:139:54\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-02T10:15:47.917Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:10:15:47 +0000] \"GET /api/users/me/budgetvsactual HTTP/1.1\" 500 80 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T10:15:47.922Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:16:45.551Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:16:45.564Z"}
+{"level":"error","message":"UserAnalytics.getBudgetVsActual is not a function","method":"GET","path":"/api/users/me/budgetvsactual","stack":"TypeError: UserAnalytics.getBudgetVsActual is not a function\n    at UserAnalyticsServices.getBudgetVsActual (E:\\ems\\src\\services\\user.services.js:89:46)\n    at E:\\ems\\src\\controllers\\user.controller.js:139:54\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-02T10:16:51.230Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:10:16:51 +0000] \"GET /api/users/me/budgetvsactual HTTP/1.1\" 500 80 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T10:16:51.246Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:17:35.491Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:17:35.502Z"}
+{"level":"error","message":"UserAnalytics.getBudgetVsActual is not a function","method":"GET","path":"/api/users/me/budgetvsactual","stack":"TypeError: UserAnalytics.getBudgetVsActual is not a function\n    at UserAnalyticsServices.getBudgetVsActual (E:\\ems\\src\\services\\user.services.js:89:46)\n    at E:\\ems\\src\\controllers\\user.controller.js:139:54\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-02T10:17:38.475Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:10:17:38 +0000] \"GET /api/users/me/budgetvsactual HTTP/1.1\" 500 80 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T10:17:38.496Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:18:23.344Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:18:23.356Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:18:48.212Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:18:48.220Z"}
+{"level":"error","message":"mongoose is not defined","method":"GET","path":"/api/users/me/budgetvsactual","stack":"ReferenceError: mongoose is not defined\n    at UserAnalytics.getBudgetVsActual (E:\\ems\\src\\repositories\\user.repository.js:83:34)\n    at UserAnalyticsServices.getBudgetVsActual (E:\\ems\\src\\services\\user.services.js:89:46)\n    at E:\\ems\\src\\controllers\\user.controller.js:139:54\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-02T10:18:51.543Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:10:18:51 +0000] \"GET /api/users/me/budgetvsactual HTTP/1.1\" 500 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T10:18:51.561Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:20:02.164Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:20:02.203Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:10:20:31 +0000] \"GET /api/users/me/budgetvsactual HTTP/1.1\" 200 20 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T10:20:31.719Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:21:48.315Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:21:48.319Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:10:21:53 +0000] \"GET /api/users/me/budgetvsactual HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T10:21:53.543Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:40:36.977Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:40:36.981Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:50:38.363Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:50:38.367Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:53:59.783Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:53:59.789Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:54:53.472Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:54:53.476Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T10:59:27.617Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T10:59:27.620Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:11:02:33 +0000] \"GET /api/users/me/catwisespending HTTP/1.1\" 404 167 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T11:02:33.338Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T11:03:24.267Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T11:03:24.271Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:11:03:26 +0000] \"GET /api/users/me/catwisespending HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T11:03:26.716Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:11:03:43 +0000] \"GET /api/users/me/topexpenses HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T11:03:43.571Z"}
+{"level":"error","message":"ownerId is not defined","method":"GET","path":"/api/users/me/lastexpenses","stack":"ReferenceError: ownerId is not defined\n    at UserAnalytics.getLast7DaysSpending (E:\\ems\\src\\repositories\\user.repository.js:186:52)\n    at UserAnalyticsServices.getLast7DaysSpending (E:\\ems\\src\\services\\user.services.js:101:46)\n    at E:\\ems\\src\\controllers\\user.controller.js:154:54\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-02T11:03:55.141Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:11:03:55 +0000] \"GET /api/users/me/lastexpenses HTTP/1.1\" 500 53 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T11:03:55.143Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T11:05:01.271Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T11:05:01.275Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T11:05:16.146Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T11:05:16.150Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T11:05:39.690Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T11:05:39.694Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:11:05:43 +0000] \"GET /api/users/me/lastexpenses HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T11:05:43.578Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:11:06:04 +0000] \"GET /api/users/me/avgdailyspending HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T11:06:04.116Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T11:25:16.310Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T11:25:16.314Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T15:39:57.987Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T15:39:57.995Z"}
+{"level":"error","message":"Invalid credentials","method":"POST","path":"/api/user","stack":"Error: Invalid credentials\n    at UserServices.loginUser (E:\\ems\\src\\services\\user.services.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async E:\\ems\\src\\controllers\\user.controller.js:36:22","statusCode":401,"timestamp":"2026-03-02T15:40:04.568Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:15:40:04 +0000] \"POST /api/user HTTP/1.1\" 401 50 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T15:40:04.584Z"}
+{"level":"error","message":"Invalid credentials","method":"POST","path":"/api/user","stack":"Error: Invalid credentials\n    at UserServices.loginUser (E:\\ems\\src\\services\\user.services.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async E:\\ems\\src\\controllers\\user.controller.js:36:22","statusCode":401,"timestamp":"2026-03-02T15:40:10.918Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:15:40:10 +0000] \"POST /api/user HTTP/1.1\" 401 50 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T15:40:10.922Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:15:44:29 +0000] \"POST /api/user HTTP/1.1\" 200 624 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T15:44:29.069Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T15:47:22.465Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T15:47:22.475Z"}
+{"level":"error","message":"Cast to ObjectId failed for value \"orgDashboard\" (type string) at path \"_id\" for model \"Organization\"","method":"GET","path":"/api/orgs/orgDashboard","stack":"CastError: Cast to ObjectId failed for value \"orgDashboard\" (type string) at path \"_id\" for model \"Organization\"\n    at SchemaObjectId.cast (E:\\ems\\node_modules\\mongoose\\lib\\schema\\objectId.js:253:11)\n    at SchemaType.applySetters (E:\\ems\\node_modules\\mongoose\\lib\\schemaType.js:1288:12)\n    at SchemaType.castForQuery (E:\\ems\\node_modules\\mongoose\\lib\\schemaType.js:1724:17)\n    at cast (E:\\ems\\node_modules\\mongoose\\lib\\cast.js:390:32)\n    at Query.cast (E:\\ems\\node_modules\\mongoose\\lib\\query.js:5060:12)\n    at Query._castConditions (E:\\ems\\node_modules\\mongoose\\lib\\query.js:2374:10)\n    at model.Query._findOne (E:\\ems\\node_modules\\mongoose\\lib\\query.js:2697:8)\n    at model.Query.exec (E:\\ems\\node_modules\\mongoose\\lib\\query.js:4627:80)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async OrgsRepository.getOne (E:\\ems\\src\\repositories\\orgs.repository.js:15:21)","statusCode":500,"timestamp":"2026-03-02T15:47:34.418Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:15:47:34 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 500 138 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T15:47:34.438Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T15:48:42.718Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T15:48:42.727Z"}
+{"level":"error","message":"Cast to ObjectId failed for value \"orgDashboard\" (type string) at path \"_id\" for model \"Organization\"","method":"GET","path":"/api/orgs/orgDashboard","stack":"CastError: Cast to ObjectId failed for value \"orgDashboard\" (type string) at path \"_id\" for model \"Organization\"\n    at SchemaObjectId.cast (E:\\ems\\node_modules\\mongoose\\lib\\schema\\objectId.js:253:11)\n    at SchemaType.applySetters (E:\\ems\\node_modules\\mongoose\\lib\\schemaType.js:1288:12)\n    at SchemaType.castForQuery (E:\\ems\\node_modules\\mongoose\\lib\\schemaType.js:1724:17)\n    at cast (E:\\ems\\node_modules\\mongoose\\lib\\cast.js:390:32)\n    at Query.cast (E:\\ems\\node_modules\\mongoose\\lib\\query.js:5060:12)\n    at Query._castConditions (E:\\ems\\node_modules\\mongoose\\lib\\query.js:2374:10)\n    at model.Query._findOne (E:\\ems\\node_modules\\mongoose\\lib\\query.js:2697:8)\n    at model.Query.exec (E:\\ems\\node_modules\\mongoose\\lib\\query.js:4627:80)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async OrgsRepository.getOne (E:\\ems\\src\\repositories\\orgs.repository.js:15:21)","statusCode":500,"timestamp":"2026-03-02T15:48:46.446Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:15:48:46 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 500 138 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T15:48:46.466Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T15:51:56.576Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T15:51:56.585Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:15:52:07 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T15:52:07.113Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T16:09:52.273Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T16:09:52.284Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T16:12:06.165Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T16:12:06.178Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T16:15:01.643Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T16:15:01.654Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T16:16:45.777Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T16:16:45.789Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:16:17:54 +0000] \"GET /api/budgets/budgetDashboard HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T16:17:54.810Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T16:27:33.941Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T16:27:33.954Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T16:28:58.012Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T16:28:58.024Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T16:31:21.744Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T16:31:21.754Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T16:31:36.806Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T16:31:36.815Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-02T16:33:20.519Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-02T16:33:20.539Z"}
+{"level":"info","message":"::1 - - [02/Mar/2026:16:50:33 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-02T16:50:33.796Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T03:39:11.994Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T03:39:11.998Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:03:39:15 +0000] \"POST /api/budgets HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T03:39:15.732Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:03:40:08 +0000] \"POST /api/user HTTP/1.1\" 200 556 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T03:40:08.553Z"}
+{"level":"error","message":"Budget for this month already exist you can only update it","method":"POST","path":"/api/budgets","stack":"Error: Budget for this month already exist you can only update it\n    at BudgetRepo.setBudget (E:\\ems\\src\\repositories\\budget.repository.js:13:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async BudgetService.setBudget (E:\\ems\\src\\services\\budget.services.js:5:28)\n    at async E:\\ems\\src\\controllers\\budget.controller.js:8:26","statusCode":401,"timestamp":"2026-03-03T03:41:02.010Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:03:41:02 +0000] \"POST /api/budgets HTTP/1.1\" 401 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T03:41:02.012Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T03:50:11.683Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T03:50:11.688Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:03:50:32 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T03:50:32.522Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:03:51:05 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T03:51:05.246Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:03:54:53 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 200 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T03:54:53.922Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:03:55:42 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 200 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T03:55:42.329Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:03:56:51 +0000] \"GET /api/users/me/monthlyspending HTTP/1.1\" 200 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T03:56:51.737Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T04:01:15.831Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T04:01:15.837Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T04:02:19.249Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T04:02:19.253Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T04:03:45.928Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T04:03:45.932Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T04:05:55.514Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T04:05:55.518Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T04:06:17.557Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T04:06:17.560Z"}
+{"level":"error","message":"Cannot destructure property 'month' of 'req.body' as it is undefined.","method":"GET","path":"/api/users/me/myDashboard","stack":"TypeError: Cannot destructure property 'month' of 'req.body' as it is undefined.\n    at E:\\ems\\src\\controllers\\user.controller.js:132:17\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-03T04:06:39.163Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:06:39 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 500 100 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:06:39.167Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:07:46 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 664 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:07:46.978Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:09:54 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 664 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:09:54.155Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:10:52 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 664 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:10:52.897Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T04:12:17.295Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T04:12:17.298Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:12:21 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 664 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:12:21.856Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T04:12:35.640Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T04:12:35.645Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T04:15:20.225Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T04:15:20.229Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:15:50 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 664 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:15:50.067Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:20:38 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 664 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:20:38.425Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:24:22 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 664 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:24:22.462Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T04:27:55.275Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T04:27:55.280Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:29:14 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 711 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:29:14.720Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:34:52 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 740 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:34:52.084Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T04:39:51.293Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T04:39:51.297Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:42:01 +0000] \"POST /api/users HTTP/1.1\" 200 699 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:42:01.603Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:43:18 +0000] \"POST /api/user HTTP/1.1\" 200 708 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:43:18.967Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:44:45 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:44:45.456Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:45:23 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:45:23.114Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:46:21 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:46:21.078Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:48:22 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:48:22.188Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:54:34 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:54:34.874Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:04:55:35 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T04:55:35.094Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:05:00:46 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T05:00:46.393Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:05:08:12 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T05:08:12.415Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:05:12:46 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T05:12:46.196Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T05:14:48.650Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T05:14:48.655Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:05:14:58 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 373 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T05:14:58.313Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:05:17:34 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 373 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T05:17:34.344Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T06:22:26.298Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T06:22:26.308Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:22:31 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:22:31.753Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:22:48 +0000] \"POST /api/user HTTP/1.1\" 200 708 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:22:48.633Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:23:25 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 373 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:23:25.107Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:38:17 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 503 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:38:17.342Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:38:55 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 565 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:38:55.530Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:40:09 +0000] \"GET /api/expenses/expenseDashboard HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:40:09.677Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:40:26 +0000] \"GET /api/expenses/expenseDashboard HTTP/1.1\" 200 139 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:40:26.967Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:40:56 +0000] \"GET /api/expenses/expenseDashboard HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:40:56.891Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:41:07 +0000] \"GET /api/expenses/expenseDashboard HTTP/1.1\" 200 139 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:41:07.963Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T06:48:40.778Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T06:48:40.787Z"}
+{"level":"error","message":"Argument passed in does not match the accepted types","method":"GET","path":"/api/expenses/expenseDashboard","stack":"BSONError: Argument passed in does not match the accepted types\n    at new ObjectId (E:\\ems\\node_modules\\bson\\lib\\bson.cjs:2542:19)\n    at E:\\ems\\src\\controllers\\expense.controller.js:71:24\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-03T06:49:25.247Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:49:25 +0000] \"GET /api/expenses/expenseDashboard HTTP/1.1\" 500 83 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:49:25.267Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T06:51:15.605Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T06:51:15.614Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:51:20 +0000] \"GET /api/expenses/expenseDashboard HTTP/1.1\" 200 139 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:51:20.026Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T06:52:25.239Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T06:52:25.249Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:06:52:28 +0000] \"GET /api/expenses/expenseDashboard HTTP/1.1\" 200 139 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T06:52:28.058Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T07:03:34.842Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T07:03:34.851Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:07:03:46 +0000] \"GET /api/expenses/expenseDashboard HTTP/1.1\" 200 10133 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:03:46.610Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T07:07:19.060Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T07:07:19.073Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T07:09:16.929Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T07:09:16.947Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:07:09:56 +0000] \"GET /api/budgets/budgetDashboard HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:09:56.971Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T07:11:50.026Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T07:11:50.038Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:07:11:55 +0000] \"GET /api/budgets/budgetDashboard HTTP/1.1\" 200 30 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:11:55.841Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:07:14:20 +0000] \"POST /api/budgets HTTP/1.1\" 201 196 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:14:20.318Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:07:14:43 +0000] \"GET /api/budgets/budgetDashboard HTTP/1.1\" 200 253 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:14:43.860Z"}
+{"level":"error","message":"Budget for this month already exist you can only update it","method":"POST","path":"/api/budgets","stack":"Error: Budget for this month already exist you can only update it\n    at BudgetRepo.setBudget (E:\\ems\\src\\repositories\\budget.repository.js:14:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async BudgetService.setBudget (E:\\ems\\src\\services\\budget.services.js:5:28)\n    at async E:\\ems\\src\\controllers\\budget.controller.js:8:26","statusCode":401,"timestamp":"2026-03-03T07:16:03.817Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:07:16:03 +0000] \"POST /api/budgets HTTP/1.1\" 401 89 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:16:03.939Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T07:30:30.030Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T07:30:30.042Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:07:30:40 +0000] \"GET /api/budgets/budgetDashboard HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:30:40.407Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T07:31:35.532Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T07:31:35.541Z"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'ownerType')","method":"GET","path":"/api/budgets/budgetDashboard","stack":"TypeError: Cannot read properties of undefined (reading 'ownerType')\n    at E:\\ems\\src\\controllers\\budget.controller.js:26:44\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\ems\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\ems\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\ems\\node_modules\\router\\index.js:295:15\n    at processParams (E:\\ems\\node_modules\\router\\index.js:582:12)\n    at next (E:\\ems\\node_modules\\router\\index.js:291:5)","statusCode":500,"timestamp":"2026-03-03T07:32:05.117Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:07:32:05 +0000] \"GET /api/budgets/budgetDashboard HTTP/1.1\" 500 88 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:32:05.136Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T07:32:24.467Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T07:32:24.479Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:07:34:45 +0000] \"POST /api/user HTTP/1.1\" 200 708 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:34:45.694Z"}
+{"level":"error","message":"Invalid $addFields :: caused by :: Unrecognized expression '$lastDayOfMonth'","method":"GET","path":"/api/budgets/budgetDashboard","stack":"MongoServerError: Invalid $addFields :: caused by :: Unrecognized expression '$lastDayOfMonth'\n    at Connection.sendCommand (E:\\ems\\node_modules\\mongodb\\lib\\cmap\\connection.js:306:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Connection.command (E:\\ems\\node_modules\\mongodb\\lib\\cmap\\connection.js:334:26)\n    at async Server.command (E:\\ems\\node_modules\\mongodb\\lib\\sdam\\server.js:194:29)\n    at async tryOperation (E:\\ems\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:213:32)\n    at async executeOperation (E:\\ems\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:78:16)\n    at async AggregationCursor._initialize (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\aggregation_cursor.js:57:26)\n    at async AggregationCursor.cursorInit (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:632:27)\n    at async AggregationCursor.fetchBatch (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:666:13)\n    at async AggregationCursor.next (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:342:17)","statusCode":500,"timestamp":"2026-03-03T07:35:19.287Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:07:35:19 +0000] \"GET /api/budgets/budgetDashboard HTTP/1.1\" 500 107 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:35:19.297Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T07:42:10.519Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T07:42:10.526Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:07:42:30 +0000] \"GET /api/budgets/budgetDashboard HTTP/1.1\" 200 248 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:42:30.562Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T07:45:00.034Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T07:45:00.053Z"}

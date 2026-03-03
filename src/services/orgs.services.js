@@ -42,6 +42,11 @@ class OrgsServices {
     async deleteOrg(id) {
         return await orgsRepository.deleteOrg(id);
     }
+
+    //////////////////////////////// ORG AGGREGATION //////////////////////////////////////
+    async getOrgDashboard(orgId){
+        return await orgsRepository.getOrgDashboard(orgId)
+    }
 }
 
 // ==========================================================================

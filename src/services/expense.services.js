@@ -160,6 +160,13 @@ class ExpenseServices {
             remaining: p.amountOwed - (p.paid || 0)
         }));
     }
+
+    // =====================================================================
+                // Expense Aggregation 
+// =====================================================================
+    async getExpenseDashboard(ownerType, ownerId){
+        return await expenseRepository.getExpenseDashboard(ownerType, ownerId)
+    }
 }
 
 // ==========================================================================

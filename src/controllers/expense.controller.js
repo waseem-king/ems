@@ -3,6 +3,7 @@
 // ==========================================================================
 
 // ----------------------------- Dependencies -----------------------------
+const { default: mongoose } = require("mongoose");
 const AppError = require("../middleware/appError");
 const { expenseServices } = require("../services");
 const asyncHandler = require("../utils/asyncHandler");
@@ -64,6 +65,14 @@ class ExpenseController {
         );
         res.json({ status: "success", data: msg });
     });
+
+    // expense aggregation controller here
+    expenseDashboard = asyncHandler(async (req, res) => {
+        console.log("Expense Controller = ",req.user.ownerType, req.user.id )
+        const msg = await expenseServices.getExpenseDashboard(req.user.ownerType, req.user.id)
+        res.json({ status: "success", data: msg });
+    });
+
 }
 
 // ==========================================================================

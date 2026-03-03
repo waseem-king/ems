@@ -10,7 +10,7 @@ const { protect } = require("../middleware/auth.middleware");
 const validate = require("../middleware/validate");
 
 // ----------------------------- Controllers -----------------------------
-const { userController } = require("../controllers");
+const { userController, UserAnalyticsController } = require("../controllers");
 
 // ----------------------------- Validators -----------------------------
 const { createUserValidator } = require("../validators/user.validator");
@@ -41,5 +41,15 @@ router.put("/users/:id", userController.updateById);
 router.delete("/users/:id", userController.deleteById);
 
 // ==========================================================================
+
+
+
+// ==========================================================================
+                        // Routes for aggregation
+// ==========================================================================
+
+router.get("/users/me/myDashboard", protect, UserAnalyticsController.myDashboard);
+
+
 
 module.exports = router;

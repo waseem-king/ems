@@ -21,6 +21,13 @@ const { createExpenseValidator, expenseIdParamValidator } = require("../validato
 // Create new expense (protected)
 router.post("/expenses", protect, createExpenseValidator, expenseController.createExpense);
 
+// expense aggregation route
+router.get(
+    "/expenses/expenseDashboard",
+    protect,
+    expenseController.expenseDashboard
+)
+
 // Get all expenses for current user (protected)
 router.get("/expenses", protect,  expenseController.getMyExpenses);
 
