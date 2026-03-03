@@ -130,7 +130,9 @@ class UserAnalyticsController{
     myDashboard = asyncHandler( async (req, res)=>{
         const userId = new mongoose.Types.ObjectId(req.user.id)
         const { month, year } = req.body;
-        const response = await UserAnalyticsServices.showtUserDashboard(userId, month, year)
+        const numMonth = Number(month);
+        const numYear = Number(year)
+        const response = await UserAnalyticsServices.showtUserDashboard(userId, numMonth, numYear)
         res.status(200).json({ status:"success", data:response})
     })
 }

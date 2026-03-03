@@ -11,7 +11,7 @@ const categorySchema = new mongoose.Schema(
 
   ownerId: {
     type:mongoose.Schema.Types.ObjectId ,
-    default:null// null for system
+    default:null
     }
 }
 

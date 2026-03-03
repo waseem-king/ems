@@ -45,5 +45,9 @@ const transformedUsers = users.map(user => ({
 }));
 
 // Write back to the file
+if (!users.length) {
+  console.log("⚠️ No users found. Aborting write operation.");
+  process.exit(1);
+}
 fs.writeFileSync(usersFilePath, JSON.stringify(transformedUsers, null, 2));
 console.log('Users data transformed successfully.');

@@ -9,7 +9,7 @@ async function connectDB() {
     console.log("Mongo db connected")
 }
 
-function generateSlug(name){
+function generateSlug(name) {
     return name
         .toLowerCase()
         .trim()
@@ -23,18 +23,18 @@ async function updateORg() {
         const orgs = await organizationModel.find();
         console.log(`📦 Found ${orgs.length} organizations`);
 
-        for( const org of orgs){
+        for (const org of orgs) {
             const slug = generateSlug(org.name);
             org.slug = slug;
             await org.save()
             console.log(`✅ Updated: ${org.name} → slug: ${slug}`);
         }
 
-     console.log("🎉 All organizations updated with slug!");
-    process.exit();
+        console.log("🎉 All organizations updated with slug!");
+        process.exit();
     } catch (error) {
         console.error("❌ Error updating organizations:", err);
-    process.exit(1);
+        process.exit(1);
     }
 }
 

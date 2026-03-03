@@ -58,7 +58,8 @@ class OrgsController {
     ////////////////////////////////    ORG AGGREGATION CONTROLLER ///////////////////////////////////////
     orgDashboard = asyncHandler(async (req, res) => {
         const orgId = new mongoose.Types.ObjectId(req.user.id)
-        const data = await orgsServices.getOrgDashboard(orgId)
+        const query = req.query;
+        const data = await orgsServices.getOrgDashboard(orgId, query)
         res.json({ status: "success", data: data });
     });
 }

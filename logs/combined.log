@@ -705,3 +705,95 @@
 {"level":"info","message":"::1 - - [03/Mar/2026:07:42:30 +0000] \"GET /api/budgets/budgetDashboard HTTP/1.1\" 200 248 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T07:42:30.562Z"}
 {"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T07:45:00.034Z"}
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T07:45:00.053Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T08:50:01.064Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T08:50:01.074Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T08:53:58.995Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T08:53:59.014Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T08:55:28.512Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T08:55:28.530Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T08:58:56.016Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T08:58:56.051Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:08:59:29 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T08:59:29.091Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:08:59:49 +0000] \"POST /api/user HTTP/1.1\" 200 708 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T08:59:49.448Z"}
+{"level":"error","message":"filters is not defined","method":"GET","path":"/api/orgs/orgDashboard","stack":"ReferenceError: filters is not defined\n    at OrgsRepository.getOrgDashboard (E:\\ems\\src\\repositories\\orgs.repository.js:39:5)\n    at OrgsServices.getOrgDashboard (E:\\ems\\src\\services\\orgs.services.js:48:37)\n    at E:\\ems\\src\\controllers\\orgs.controller.js:61:41\n    at E:\\ems\\src\\utils\\asyncHandler.js:10:25\n    at Layer.handleRequest (E:\\ems\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\ems\\node_modules\\router\\lib\\route.js:157:13)\n    at protect (E:\\ems\\src\\middleware\\auth.middleware.js:45:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","statusCode":500,"timestamp":"2026-03-03T09:00:19.774Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:00:19 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 500 53 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:00:19.780Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T09:05:21.704Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T09:05:21.712Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:05:27 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 565 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:05:27.492Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:06:06 +0000] \"GET /api/orgs/orgDashboard?month=3&year=2025 HTTP/1.1\" 200 565 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:06:06.737Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:08:04 +0000] \"GET /api/orgs/orgDashboard?startDate=2026-01-01&endDate=2026-02-28 HTTP/1.1\" 200 565 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:08:04.592Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T09:16:44.367Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T09:16:44.382Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T09:21:54.206Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T09:21:54.210Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:22:07 +0000] \"GET /api/orgs/orgDashboard?startDate=2026-01-01&endDate=2026-02-28 HTTP/1.1\" 200 565 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:22:07.452Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:22:48 +0000] \"GET /api/orgs/orgDashboard?month=1&year=2024 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:22:48.491Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:22:59 +0000] \"GET /api/orgs/orgDashboard?month=1&year=2025 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:22:59.651Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:23:05 +0000] \"GET /api/orgs/orgDashboard?month=1&year=2026 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:23:05.851Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:23:11 +0000] \"GET /api/orgs/orgDashboard?month=2&year=2026 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:23:11.588Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:23:19 +0000] \"GET /api/orgs/orgDashboard?month=3&year=2026 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:23:19.369Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T09:23:25.254Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T09:23:25.258Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:23:28 +0000] \"GET /api/orgs/orgDashboard?month=3&year=2026 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:23:28.469Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T09:24:48.872Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T09:24:48.876Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:24:51 +0000] \"GET /api/orgs/orgDashboard?month=3&year=2026 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:24:51.166Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T09:27:33.272Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T09:27:33.276Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:27:36 +0000] \"GET /api/orgs/orgDashboard?month=3&year=2026 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:27:36.938Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:27:42 +0000] \"GET /api/orgs/orgDashboard?month=2&year=2026 HTTP/1.1\" 200 565 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:27:42.630Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:29:43 +0000] \"GET /api/orgs/orgDashboard?month=2&year=2026&startDate=2026-01-01&endDate=2026-03-31 HTTP/1.1\" 200 565 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:29:43.040Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:30:10 +0000] \"GET /api/orgs/orgDashboard?startDate=2026-01-01&endDate=2026-03-31 HTTP/1.1\" 200 565 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:30:10.724Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:30:29 +0000] \"GET /api/orgs/orgDashboard?startDate=2025-01-01&endDate=2025-03-31 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:30:29.815Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:30:50 +0000] \"GET /api/orgs/orgDashboard?startDate=2026-01-01&endDate=2026-03-31 HTTP/1.1\" 200 565 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:30:50.711Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:32:18 +0000] \"GET /api/orgs/orgDashboard?userId=69a6669911a9f66af0ddde94 HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:32:18.142Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:33:31 +0000] \"GET /api/orgs/orgDashboard?categoryId=69a5bfb6660c224d47a91f3c HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:33:31.858Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:34:08 +0000] \"GET /api/orgs/orgDashboard?categoryId=69a5bfb6660c224d47a91f42 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:34:08.487Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:34:56 +0000] \"GET /api/orgs/orgDashboard HTTP/1.1\" 200 565 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:34:56.997Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:35:49 +0000] \"GET /api/orgs/orgDashboard?categoryId=69a5bfb6660c224d47a91f45 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:35:49.013Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:35:55 +0000] \"GET /api/orgs/orgDashboard?userId=69a6669911a9f66af0ddde94&categoryId=69a5bfb6660c224d47a91f45 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:35:55.486Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:36:00 +0000] \"GET /api/orgs/orgDashboard?userId=69a6669911a9f66af0ddde94 HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:36:00.695Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:37:54 +0000] \"GET /api/orgs/orgDashboard?userId=69a6669911a9f66af0ddde94&categoryId=69a5bfb6660c224d47a91f4c HTTP/1.1\" 200 338 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:37:54.815Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:38:02 +0000] \"GET /api/orgs/orgDashboard?categoryId=69a5bfb6660c224d47a91f4c HTTP/1.1\" 200 338 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:38:02.386Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:38:33 +0000] \"GET /api/orgs/orgDashboard?userId=69a6669911a9f66af0ddde94&categoryId=69a5bfb6660c224d47a91f4c HTTP/1.1\" 200 338 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:38:33.998Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:38:48 +0000] \"GET /api/orgs/orgDashboard?startDate=2026-01-01&endDate=2026-03-31 HTTP/1.1\" 200 565 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:38:48.158Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:09:39:12 +0000] \"GET /api/orgs/orgDashboard?startDate=2026-01-01&endDate=2026-03-31&userId=69a6669911a9f66af0ddde94 HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T09:39:12.372Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T10:00:51.946Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T10:00:51.950Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T10:01:08.979Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T10:01:08.983Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T10:01:17.942Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T10:01:17.946Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T10:27:44.102Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T10:27:44.105Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T10:31:43.440Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T10:31:43.446Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T10:31:56.574Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T10:31:56.578Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:32:56 +0000] \"GET /api/orgs/orgDashboard?name=Lara HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:32:56.719Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:33:07 +0000] \"POST /api/user HTTP/1.1\" 200 708 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:33:07.233Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:33:41 +0000] \"GET /api/orgs/orgDashboard?name=Lara HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:33:41.051Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T10:34:29.391Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T10:34:29.395Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:34:32 +0000] \"GET /api/orgs/orgDashboard?name=Lara HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:34:32.583Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T10:35:01.855Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T10:35:01.859Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:35:07 +0000] \"GET /api/orgs/orgDashboard?name=Lara HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:35:07.244Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:36:02 +0000] \"GET /api/orgs/orgDashboard?name=brayne HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:36:02.981Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T10:37:38.168Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T10:37:38.172Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:37:41 +0000] \"GET /api/orgs/orgDashboard?name=brayne HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:37:41.871Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T10:38:14.939Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T10:38:14.943Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:38:17 +0000] \"GET /api/orgs/orgDashboard?name=brayne HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:38:17.547Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:38:32 +0000] \"GET /api/orgs/orgDashboard?name=lara HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:38:32.253Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:40:15 +0000] \"GET /api/orgs/orgDashboard?name=lara&phone=03001234567 HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:40:15.663Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:40:45 +0000] \"GET /api/orgs/orgDashboard?name=lara&phone=03001234568 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:40:45.350Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:40:58 +0000] \"GET /api/orgs/orgDashboard?name=lara&phone=03001234567 HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:40:58.281Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:10:41:08 +0000] \"GET /api/orgs/orgDashboard?phone=03001234567 HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T10:41:08.470Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T11:22:06.578Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T11:22:06.591Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T11:30:59.026Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T11:30:59.035Z"}
+{"level":"error","message":"FieldPath field names may not start with '$'. Consider using $getField or $setField.","method":"GET","path":"/api/orgs/orgDashboard?phone=03001234567","stack":"MongoServerError: FieldPath field names may not start with '$'. Consider using $getField or $setField.\n    at Connection.sendCommand (E:\\ems\\node_modules\\mongodb\\lib\\cmap\\connection.js:306:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Connection.command (E:\\ems\\node_modules\\mongodb\\lib\\cmap\\connection.js:334:26)\n    at async Server.command (E:\\ems\\node_modules\\mongodb\\lib\\sdam\\server.js:194:29)\n    at async tryOperation (E:\\ems\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:213:32)\n    at async executeOperation (E:\\ems\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:78:16)\n    at async AggregationCursor._initialize (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\aggregation_cursor.js:57:26)\n    at async AggregationCursor.cursorInit (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:632:27)\n    at async AggregationCursor.fetchBatch (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:666:13)\n    at async AggregationCursor.next (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:342:17)","statusCode":500,"timestamp":"2026-03-03T11:31:05.023Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:11:31:05 +0000] \"GET /api/orgs/orgDashboard?phone=03001234567 HTTP/1.1\" 500 115 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T11:31:05.056Z"}

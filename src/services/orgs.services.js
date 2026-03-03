@@ -44,8 +44,8 @@ class OrgsServices {
     }
 
     //////////////////////////////// ORG AGGREGATION //////////////////////////////////////
-    async getOrgDashboard(orgId){
-        return await orgsRepository.getOrgDashboard(orgId)
+    async getOrgDashboard(orgId, query){
+        return await orgsRepository.getOrgDashboard(orgId, query)
     }
 }
 
