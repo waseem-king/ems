@@ -797,3 +797,97 @@
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T11:30:59.035Z"}
 {"level":"error","message":"FieldPath field names may not start with '$'. Consider using $getField or $setField.","method":"GET","path":"/api/orgs/orgDashboard?phone=03001234567","stack":"MongoServerError: FieldPath field names may not start with '$'. Consider using $getField or $setField.\n    at Connection.sendCommand (E:\\ems\\node_modules\\mongodb\\lib\\cmap\\connection.js:306:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Connection.command (E:\\ems\\node_modules\\mongodb\\lib\\cmap\\connection.js:334:26)\n    at async Server.command (E:\\ems\\node_modules\\mongodb\\lib\\sdam\\server.js:194:29)\n    at async tryOperation (E:\\ems\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:213:32)\n    at async executeOperation (E:\\ems\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:78:16)\n    at async AggregationCursor._initialize (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\aggregation_cursor.js:57:26)\n    at async AggregationCursor.cursorInit (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:632:27)\n    at async AggregationCursor.fetchBatch (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:666:13)\n    at async AggregationCursor.next (E:\\ems\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:342:17)","statusCode":500,"timestamp":"2026-03-03T11:31:05.023Z"}
 {"level":"info","message":"::1 - - [03/Mar/2026:11:31:05 +0000] \"GET /api/orgs/orgDashboard?phone=03001234567 HTTP/1.1\" 500 115 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T11:31:05.056Z"}
+{"level":"info","message":"Mongo db connected host is localhost","timestamp":"2026-03-03T11:32:43.435Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T11:32:43.442Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:11:32:50 +0000] \"GET /api/orgs/orgDashboard?phone=03001234567 HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T11:32:50.154Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:11:33:03 +0000] \"GET /api/orgs/orgDashboard?phone=03001234566 HTTP/1.1\" 200 142 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T11:33:03.762Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:11:33:13 +0000] \"GET /api/orgs/orgDashboard?name=lara&phone=03001234567 HTTP/1.1\" 401 54 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T11:33:13.450Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:11:33:23 +0000] \"POST /api/user HTTP/1.1\" 200 708 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T11:33:23.733Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:11:33:48 +0000] \"GET /api/orgs/orgDashboard?name=lara&phone=03001234567 HTTP/1.1\" 200 410 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T11:33:48.396Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-03T15:37:00.191Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T15:37:00.210Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:15:43:05 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36\"","timestamp":"2026-03-03T15:43:05.464Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:15:43:06 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36\"","timestamp":"2026-03-03T15:43:06.660Z"}
+{"level":"error","message":"Invalid credentials","method":"POST","path":"/api/user","stack":"Error: Invalid credentials\n    at UserServices.loginUser (E:\\ems\\src\\services\\user.services.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async E:\\ems\\src\\controllers\\user.controller.js:37:22","statusCode":401,"timestamp":"2026-03-03T15:43:58.919Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:15:43:58 +0000] \"POST /api/user HTTP/1.1\" 401 50 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T15:43:58.930Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-03T15:45:51.311Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T15:45:51.322Z"}
+{"level":"error","message":"Invalid credentials","method":"POST","path":"/api/user","stack":"Error: Invalid credentials\n    at UserServices.loginUser (E:\\ems\\src\\services\\user.services.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async E:\\ems\\src\\controllers\\user.controller.js:37:22","statusCode":401,"timestamp":"2026-03-03T15:46:09.008Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:15:46:09 +0000] \"POST /api/user HTTP/1.1\" 401 50 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T15:46:09.026Z"}
+{"level":"error","message":"Invalid credentials","method":"POST","path":"/api/user","stack":"Error: Invalid credentials\n    at UserServices.loginUser (E:\\ems\\src\\services\\user.services.js:35:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async E:\\ems\\src\\controllers\\user.controller.js:37:22","statusCode":401,"timestamp":"2026-03-03T15:46:24.768Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:15:46:24 +0000] \"POST /api/user HTTP/1.1\" 401 50 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T15:46:24.772Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:15:55:23 +0000] \"POST /api/users HTTP/1.1\" 200 699 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T15:55:23.629Z"}
+{"level":"error","message":"User validation failed: role: `CEO` is not a valid enum value for path `role`.","method":"POST","path":"/api/users","stack":"ValidationError: User validation failed: role: `CEO` is not a valid enum value for path `role`.\n    at Document.invalidate (E:\\ems\\node_modules\\mongoose\\lib\\document.js:3381:32)\n    at E:\\ems\\node_modules\\mongoose\\lib\\document.js:3142:17\n    at E:\\ems\\node_modules\\mongoose\\lib\\schemaType.js:1446:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","statusCode":500,"timestamp":"2026-03-03T16:03:36.703Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:16:03:36 +0000] \"POST /api/users HTTP/1.1\" 500 109 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T16:03:36.709Z"}
+{"level":"error","message":"User validation failed: role: `CEO` is not a valid enum value for path `role`.","method":"POST","path":"/api/users","stack":"ValidationError: User validation failed: role: `CEO` is not a valid enum value for path `role`.\n    at Document.invalidate (E:\\ems\\node_modules\\mongoose\\lib\\document.js:3381:32)\n    at E:\\ems\\node_modules\\mongoose\\lib\\document.js:3142:17\n    at E:\\ems\\node_modules\\mongoose\\lib\\schemaType.js:1446:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","statusCode":500,"timestamp":"2026-03-03T16:04:07.828Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:16:04:07 +0000] \"POST /api/users HTTP/1.1\" 500 109 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T16:04:07.831Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-03T16:05:04.325Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T16:05:04.337Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:16:16:20 +0000] \"POST /api/users HTTP/1.1\" 200 714 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T16:16:20.948Z"}
+{"level":"error","message":"User validation failed: role: `Captain` is not a valid enum value for path `role`.","method":"POST","path":"/api/users","stack":"ValidationError: User validation failed: role: `Captain` is not a valid enum value for path `role`.\n    at Document.invalidate (E:\\ems\\node_modules\\mongoose\\lib\\document.js:3381:32)\n    at E:\\ems\\node_modules\\mongoose\\lib\\document.js:3142:17\n    at E:\\ems\\node_modules\\mongoose\\lib\\schemaType.js:1446:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","statusCode":500,"timestamp":"2026-03-03T16:17:09.848Z"}
+{"level":"info","message":"::1 - - [03/Mar/2026:16:17:09 +0000] \"POST /api/users HTTP/1.1\" 500 113 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-03T16:17:09.856Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-03T16:19:50.174Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-03T16:19:50.194Z"}
+{"level":"error","message":"Mongo db connection error: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","timestamp":"2026-03-04T05:43:39.602Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T06:01:05.233Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T06:01:05.237Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T06:30:39.291Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T06:30:39.296Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-04T06:33:03.035Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T06:33:03.039Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T06:35:04.310Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T06:35:04.313Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-04T06:38:26.205Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T06:38:26.209Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T06:39:46.078Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T06:39:46.082Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-04T06:43:05.154Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T06:43:05.158Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T06:44:32.904Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T06:44:32.907Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-04T06:44:38.116Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T06:44:38.120Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-04T06:52:23.910Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T06:52:23.914Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-04T06:54:13.347Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T06:54:13.351Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-04T07:04:08.150Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T07:04:08.154Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T07:11:30.971Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T07:11:30.975Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-04T07:12:04.522Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T07:12:04.528Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-04T07:18:46.794Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T07:18:46.798Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-04T07:40:36.813Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T07:40:36.821Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-04T07:43:29.453Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T07:43:29.463Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-04T07:45:08.021Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T07:45:08.029Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T07:45:34.575Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T07:45:34.591Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-04T07:46:16.572Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T07:46:16.582Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T07:49:20.517Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T07:49:20.530Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-04T07:55:51.404Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T07:55:51.429Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-04T08:01:36.310Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T08:01:36.323Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T08:06:03.071Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T08:06:03.083Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T08:06:53.683Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T08:06:53.695Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T08:11:09.933Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T08:11:09.942Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T08:12:10.546Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T08:12:10.559Z"}
+{"level":"info","message":"::1 - - [04/Mar/2026:08:13:46 +0000] \"POST /api/user HTTP/1.1\" 200 709 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-04T08:13:46.946Z"}
+{"level":"info","message":"::1 - - [04/Mar/2026:08:15:09 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 1189 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-04T08:15:09.395Z"}
+{"level":"info","message":"::1 - - [04/Mar/2026:08:15:54 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 1189 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-04T08:15:54.074Z"}
+{"level":"info","message":"::1 - - [04/Mar/2026:08:16:07 +0000] \"GET /api/users/me/myDashboard HTTP/1.1\" 200 1189 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-04T08:16:07.747Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T08:17:22.176Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T08:17:22.188Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-04T08:50:44.094Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-04T08:50:44.104Z"}

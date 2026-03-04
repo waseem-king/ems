@@ -30,7 +30,7 @@ const userSchema = new mongoose.Schema({
     // in the case organization create their own organization member using this user schema
     role: {
         type: String,
-        enum: ['ceo', 'hr', 'team_lead', 'senior', 'junior'],
+        enum: ['ceo', 'hr', 'captain', 'senior', 'junior'],
         default: "junior"
     },
     // in the case organization create their own organization member using this user schema

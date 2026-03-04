@@ -1,80 +1,75 @@
-// seed_categories.js
 require("dotenv").config();
 const mongoose = require("mongoose");
-const Category = require("../models/category.model"); // Change path to your Category model
-const Organization = require("../models/organization.model"); // Change path to your Organization model
-const userModel = require("../models/user.model");
+const Category = require("../models/category.model");
+const User = require("../models/user.model");
+const Organization = require("../models/organization.model");
 
-const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/ems";
+const MONGO_URI = process.env.MONGO_URI || `mongodb+srv://waseem_db_user:wasi7Allah@cluster0.qvgcdm6.mongodb.net/test`;
 
-// --------------- Static category keywords (same as your AI model) -----------------
-const CATEGORY_KEYWORDS = {
-  food: ["restaurant","food","meal","lunch","dinner","breakfast","coffee","cafe","pizza","burger","sandwich","snack","drink","beverage","grocery","supermarket","cook","kitchen","delivery","takeout"],
-  transportation: ["uber","lyft","taxi","cab","gas","fuel","petrol","parking","toll","bus","train","metro","subway","flight","airline","car","vehicle","auto","transport","travel","rent","lease"],
-  shopping: ["amazon","ebay","walmart","target","store","shop","buy","purchase","clothing","clothes","shoes","accessories","gift","electronics","phone","laptop","computer","furniture"],
-  entertainment: ["movie","film","netflix","spotify","hulu","disney","game","gaming","concert","ticket","event","show","party","club","bar","night","entertainment","hobby","sport","gym","fitness"],
-  utilities: ["electric","electricity","water","gas bill","internet","wifi","phone bill","mobile","utility","bill","power","cable","net"],
-  healthcare: ["doctor","hospital","pharmacy","medicine","drug","medical","health","dental","dentist","eye","vision","prescription","therapy","insurance","clinic","wellness"],
-  education: ["book","course","tuition","school","college","university","training","workshop","class","education","learning","exam","subscription","membership"],
-  office: ["office","supplies","staples","printer","ink","paper","desk","chair","equipment","software","license","domain","hosting","cloud","service"],
-  travel: ["hotel","motel","airbnb","resort","lodging","accommodation","vacation","trip","booking","hostel","suite","room"],
-  other: []
-};
-
-// --------------- Helper to get random array element -----------------
-function randomElement(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
-// --------------- Seed function -----------------
 async function seedCategories() {
   try {
     await mongoose.connect(MONGO_URI);
-    console.log("Connected to MongoDB");
+    console.log("✅ MongoDB connected for Category seeding");
 
-    // 1️⃣ Clear existing custom categories if needed
-    await Category.deleteMany({ type: "custom" });
+    // 1. Get the target owners
+    const firstUser = await User.findOne({ownerType:"user"}).sort({ createdAt: 1 });
+    const firstOrg = await Organization.findOne().sort({ createdAt: 1 }).skip(1);
 
-    // 2️⃣ Fetch all organizations
-    const organizations = await Organization.find({});
-    console.log(`Found ${organizations.length} organizations`);
-
-    const categoriesToInsert = [];
-
-    // 3️⃣ System categories for individual users
-    const userTypes = ["student", "housewife", "freelancer", "single shop owner", "single worker"];
-    const users = await userModel.find();
-    for (let i = 0; i < 550; i++) {
-      const name = `${randomElement(Object.keys(CATEGORY_KEYWORDS))} - ${randomElement(userTypes)}`;
-      const randomUser = randomElement(users);
-      categoriesToInsert.push({
-        name,
-        type: "custom",
-        ownerId: randomUser._id, // belongs to individual users
-      });
+    if (!firstUser || !firstOrg) {
+      console.error("❌ Error: You must seed Users and Organizations before Categories!");
+      process.exit(1);
     }
 
-    // 4️⃣ Categories for organizations
-    organizations.forEach(org => {
-      const orgCategoryCount = Math.floor(Math.random() * 5) + 5; // 5-9 categories per org
-      for (let i = 0; i < orgCategoryCount; i++) {
-        const name = `${randomElement(Object.keys(CATEGORY_KEYWORDS))} - ${org.name}`;
-        categoriesToInsert.push({
-          name,
-          type: "custom",
-          ownerId: org._id,
-        });
-      }
+    const categories = [];
+
+    // 2. Define standard categories for a Personal User
+    // const userCatNames = ["Food & Drinks", "Transportation", "Rent", "Entertainment", "Shopping"];
+    const userCatNames = [
+  "Food & Drinks", "Transportation", "Rent", "Entertainment", "Shopping",
+  "Groceries", "Utilities", "Healthcare", "Education", "Household Supplies",
+  "Vehicle Maintenance", "Insurance", "Internet & Mobile", "Gifts", "Savings"
+];
+
+    userCatNames.forEach(name => {
+      categories.push({
+        name: name,
+        ownerId: firstUser._id,
+        ownerType: "user",
+        icon: "user-icon-path", // Optional: depending on your schema
+        isActive: true
+      });
     });
 
-    // 5️⃣ Insert all categories
-    await Category.insertMany(categoriesToInsert);
-    console.log(`Inserted ${categoriesToInsert.length} categories successfully`);
+    // 3. Define standard categories for an Organization
+    // const orgCatNames = ["Office Supplies", "Salaries", "Utilities", "Marketing", "Travel"];
+    const orgCatNames = [
+  "Office Supplies", "Salaries", "Utilities", "Marketing", "Travel",
+  "Rent & Lease", "Employee Benefits", "Insurance", "Professional Services",
+  "Software Subscriptions", "Inventory", "Shipping", "Taxes & Licenses", "Maintenance"
+];
 
-    mongoose.disconnect();
+    orgCatNames.forEach(name => {
+      categories.push({
+        name: name,
+        ownerId: firstOrg._id,
+        ownerType: "organization",
+        icon: "org-icon-path",
+        isActive: true
+      });
+    });
+
+    // 4. Clean old categories (optional) and insert new ones
+    // await Category.deleteMany({}); 
+    const res = await Category.insertMany(categories);
+    
+    console.log(`🎉 Success: ${res.length} Categories created!`);
+    console.log(`- ${userCatNames.length} for User: ${firstUser.name}`);
+    console.log(`- ${orgCatNames.length} for Organization: ${firstOrg.name}`);
+
+    process.exit(0);
   } catch (err) {
-    console.error("Error seeding categories:", err);
-    mongoose.disconnect();
+    console.error("❌ Seeding Error:", err);
+    process.exit(1);
   }
 }
 

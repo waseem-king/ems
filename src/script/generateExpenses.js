@@ -2,96 +2,79 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const Expense = require("../models/expense.model");
 const User = require("../models/user.model");
+const Organization = require("../models/organization.model");
 const Category = require("../models/category.model");
 const { faker } = require("@faker-js/faker");
 
-const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/ems";
+const MONGO_URI = process.env.MONGO_URI || `mongodb+srv://waseem_db_user:wasi7Allah@cluster0.qvgcdm6.mongodb.net/test`;
 
-// ---------------- CONNECT TO DB ----------------
 async function connectDB() {
   await mongoose.connect(MONGO_URI);
   console.log("✅ MongoDB connected");
 }
 
-// ---------------- RANDOM ITEM ----------------
-function randomItem(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
-// ---------------- GENERATE PARTICIPANTS ----------------
-function generateParticipants(users) {
-  const num = Math.floor(Math.random() * 5) + 2; // 2-6 participants
-  const participants = [];
-  const selectedUsers = faker.helpers.shuffle(users).slice(0, num);
-
-  selectedUsers.forEach(user => {
-    const amountOwed = faker.number.int({ min: 50, max: 500 });
-    participants.push({
-      name: user.name,
-      isUser: true,
-      userId: user._id,
-      paidAmount: faker.number.int({ min: 0, max: amountOwed }),
-      amountOwed,
-      paidAt: faker.datatype.boolean() ? faker.date.recent(10) : null
-    });
-  });
-
-  return participants;
-}
-
-// ---------------- GENERATE EXPENSES ----------------
 async function generateExpenses() {
   try {
     await connectDB();
 
-    const users = await User.find();
-    const categories = await Category.find();
+    // 1. Get the target owners
+    const firstUser = await User.findOne({ownerType:"user"}).sort({ createdAt: 1 });
+    const firstOrg = await Organization.findOne().sort({ createdAt: 1 }).skip(1);
 
-    if (!users.length || !categories.length) {
-      console.error("❌ Users or Categories not found in DB");
-      process.exit(1);
+    if (!firstUser || !firstOrg) {
+        console.error("❌ Need at least one user and one organization in DB first!");
+        process.exit(1);
     }
 
     const expenses = [];
 
-    // 50 expenses WITHOUT participants
-    for (let i = 0; i < 50; i++) {
-      const owner = randomItem(users);
+    // --- 20 EXPENSES FOR 1st USER (Over different dates) ---
+    // We fetch categories owned by this user
+    const userCategories = await Category.find({ ownerId: firstUser._id });
+    
+    for (let i = 0; i < 20; i++) {
       expenses.push({
         title: faker.commerce.productName(),
-        amount: faker.number.int({ min: 100, max: 5000 }),
-        category: randomItem(categories)._id,
+        amount: faker.number.int({ min: 100, max: 2000 }),
+        // If user has no specific categories, we'd need a fallback or ensure they exist
+        category: userCategories.length > 0 ? faker.helpers.arrayElement(userCategories)._id : null,
         ownerType: "user",
-        ownerId: owner._id,
-        createdBy: owner._id,
+        ownerId: firstUser._id,
+        createdBy: firstUser._id,
         note: faker.lorem.sentence(),
         splitType: "equal",
-        participants: [] // no participants
+        // Spread dates over the last 2 years
+        createdAt: faker.date.between({ from: '2024-01-01', to: new Date() }),
+        participants: []
       });
     }
 
-    // 50 expenses WITH participants
-    for (let i = 0; i < 50; i++) {
-      const owner = randomItem(users);
+    // --- 30 EXPENSES FOR 1st ORG (Over different dates) ---
+    const orgCategories = await Category.find({ ownerId: firstOrg._id });
+
+    for (let i = 0; i < 30; i++) {
       expenses.push({
-        title: faker.commerce.productName(),
-        amount: faker.number.int({ min: 100, max: 5000 }),
-        category: randomItem(categories)._id,
-        ownerType: "user",
-        ownerId: owner._id,
-        createdBy: owner._id,
+        title: faker.company.buzzPhrase(),
+        amount: faker.number.int({ min: 1000, max: 50000 }),
+        category: orgCategories.length > 0 ? faker.helpers.arrayElement(orgCategories)._id : null,
+        ownerType: "organization",
+        ownerId: firstOrg._id,
+        createdBy: firstUser._id, // Usually the CEO/Admin creates it
         note: faker.lorem.sentence(),
-        splitType: randomItem(["equal", "percentage", "custom"]),
-        participants: generateParticipants(users)
+        splitType: "equal",
+        // Spread dates over several months
+        createdAt: faker.date.past({ years: 1 }),
+        participants: []
       });
     }
 
     // Insert into DB
     await Expense.insertMany(expenses);
-    console.log("🎉 100 dummy expenses inserted successfully!");
-    process.exit();
+    console.log(`🎉 Success: 20 User expenses and 30 Org expenses created!`);
+    process.exit(0);
+
   } catch (err) {
-    console.error("❌ Error generating expenses:", err);
+    console.error("❌ Error:", err);
     process.exit(1);
   }
 }
