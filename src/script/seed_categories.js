@@ -12,7 +12,7 @@ async function seedCategories() {
     console.log("✅ MongoDB connected for Category seeding");
 
     // 1. Get the target owners
-    const firstUser = await User.findOne({ownerType:"user"}).sort({ createdAt: 1 });
+    const firstUser = await User.findOne({ ownerType: "user" }).sort({ createdAt: 1 });
     const firstOrg = await Organization.findOne().sort({ createdAt: 1 }).skip(1);
 
     if (!firstUser || !firstOrg) {
@@ -25,10 +25,10 @@ async function seedCategories() {
     // 2. Define standard categories for a Personal User
     // const userCatNames = ["Food & Drinks", "Transportation", "Rent", "Entertainment", "Shopping"];
     const userCatNames = [
-  "Food & Drinks", "Transportation", "Rent", "Entertainment", "Shopping",
-  "Groceries", "Utilities", "Healthcare", "Education", "Household Supplies",
-  "Vehicle Maintenance", "Insurance", "Internet & Mobile", "Gifts", "Savings"
-];
+      "Food & Drinks", "Transportation", "Rent", "Entertainment", "Shopping",
+      "Groceries", "Utilities", "Healthcare", "Education", "Household Supplies",
+      "Vehicle Maintenance", "Insurance", "Internet & Mobile", "Gifts", "Savings"
+    ];
 
     userCatNames.forEach(name => {
       categories.push({
@@ -43,10 +43,10 @@ async function seedCategories() {
     // 3. Define standard categories for an Organization
     // const orgCatNames = ["Office Supplies", "Salaries", "Utilities", "Marketing", "Travel"];
     const orgCatNames = [
-  "Office Supplies", "Salaries", "Utilities", "Marketing", "Travel",
-  "Rent & Lease", "Employee Benefits", "Insurance", "Professional Services",
-  "Software Subscriptions", "Inventory", "Shipping", "Taxes & Licenses", "Maintenance"
-];
+      "Office Supplies", "Salaries", "Utilities", "Marketing", "Travel",
+      "Rent & Lease", "Employee Benefits", "Insurance", "Professional Services",
+      "Software Subscriptions", "Inventory", "Shipping", "Taxes & Licenses", "Maintenance"
+    ];
 
     orgCatNames.forEach(name => {
       categories.push({
@@ -61,7 +61,7 @@ async function seedCategories() {
     // 4. Clean old categories (optional) and insert new ones
     // await Category.deleteMany({}); 
     const res = await Category.insertMany(categories);
-    
+
     console.log(`🎉 Success: ${res.length} Categories created!`);
     console.log(`- ${userCatNames.length} for User: ${firstUser.name}`);
     console.log(`- ${orgCatNames.length} for Organization: ${firstOrg.name}`);

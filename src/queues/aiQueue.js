@@ -5,7 +5,6 @@ const IORedis = require("ioredis");
 // On Railway, process.env.REDIS_URL is automatically provided 
 // once you add the Redis service to your project.
 const redis_url = process.env.REDIS_URL
-console.log("UUUUUUUUUUU = ", redis_url)
 
 
 
