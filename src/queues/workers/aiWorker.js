@@ -1,3 +1,4 @@
+require("dotenv").config()
 const { Worker, tryCatch } = require("bullmq");
 const IORedis = require("ioredis");
 const { expenseModel } = require("../../models");
@@ -5,14 +6,18 @@ const { categorizeExpense } = require("../../ai/aiClient");
 const logger = require("../../config/logger");
 
 
-const redis_url = process.env.REDIS_URL || `redis://default:XTRdFdzioWTXlimAftjsPbWItJCDVfXl@redis.railway.internal:6379`
-if(!redis_url){
-    throw new Error("Redis url is required for connecting with redis server")
-}
-// Use REDIS_URL if available (Railway), otherwise fall back to individual host/port
+// On Railway, process.env.REDIS_URL is automatically provided 
+// once you add the Redis service to your project.
+const redis_url = process.env.REDIS_URL
+
+// 1. Create the connection instance
+// We don't need 'async' here; ioredis connects automatically.
 const connection = new IORedis(redis_url, {
-  maxRetriesPerRequest: null, // Critical for BullMQ compatibility
+    maxRetriesPerRequest: null, // Required by BullMQ
 });
+
+connection.on("error", (err) => console.error("Redis Connection Error:", err));
+connection.on("connect", () => console.log("✅ Redis connected successfully"));
 
 // worker to process ai categorization
 const aiWorker = new Worker(
