@@ -10,8 +10,8 @@ import os
 app = Flask(__name__)
 
 # Configuration
-PORT = int(os.environ.get('AI_SERVICE_PORT', 5000))
-HOST = os.environ.get('AI_SERVICE_HOST', '0.0.0.0')
+PORT = int(os.environ.get('PORT', 5000))
+HOST = os.environ.get('HOST', '0.0.0.0')
 
 @app.route('/health', methods=['GET'])
 def health_check():
