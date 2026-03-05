@@ -4,10 +4,13 @@ const { expenseModel } = require("../../models");
 const { categorizeExpense } = require("../../ai/aiClient");
 const logger = require("../../config/logger");
 
+
+const redis_url = process.env.REDIS_URL || `redis://default:XTRdFdzioWTXlimAftjsPbWItJCDVfXl@redis.railway.internal:6379`
+if(!redis_url){
+    throw new Error("Redis url is required for connecting with redis server")
+}
 // Use REDIS_URL if available (Railway), otherwise fall back to individual host/port
-const connection = new IORedis(process.env.REDIS_URL || {
-  host: process.env.REDIS_HOST || '127.0.0.1',
-  port: process.env.REDIS_PORT || 6379,
+const connection = new IORedis(redis_url, {
   maxRetriesPerRequest: null, // Critical for BullMQ compatibility
 });
 
