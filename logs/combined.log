@@ -967,3 +967,5 @@
 {"level":"error","message":"Mongo db connection error: queryTxt ESERVFAIL cluster0.qvgcdm6.mongodb.net","timestamp":"2026-03-05T11:39:01.124Z"}
 {"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-05T11:39:12.019Z"}
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-03-05T11:39:12.035Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-05T11:40:02.291Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-05T11:40:02.304Z"}

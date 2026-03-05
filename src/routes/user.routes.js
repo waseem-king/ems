@@ -26,19 +26,19 @@ router.post("/users", createUserValidator, validate, userController.createUser);
 router.post("/user", validate, userController.loginUser);
 
 // Get all users
-router.get("/users", userController.findAll);
+router.get("/users", protect, userController.findAll);
 
 // Get user by ID
-router.get("/users/:id", userController.findExistingUser);
+router.get("/users/:id", protect, userController.findExistingUser);
 
 // Get user by email
-router.get("/users/email/:email", userController.findByEmail);
+router.get("/users/email/:email", protect, userController.findByEmail);
 
 // Update user by ID
-router.put("/users/:id", userController.updateById);
+router.put("/users/:id", protect, userController.updateById);
 
 // Delete user by ID
-router.delete("/users/:id", userController.deleteById);
+router.delete("/users/:id", protect, userController.deleteById);
 
 // ==========================================================================
 
