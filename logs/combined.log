@@ -969,3 +969,53 @@
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-03-05T11:39:12.035Z"}
 {"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-05T11:40:02.291Z"}
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-03-05T11:40:02.304Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:21:50.389Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:21:50.399Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:22:09.448Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:22:09.465Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:22:16.666Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:22:16.675Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:22:35.699Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:22:35.718Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:22:53.979Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:22:53.994Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:23:08.908Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:23:08.929Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:23:29.190Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:23:29.217Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:23:50.915Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:23:50.940Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:26:16.481Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:26:16.494Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:26:41.068Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:26:41.083Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:27:07.080Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:27:07.095Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:27:15.352Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:27:15.359Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:27:31.212Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:27:31.225Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:27:41.300Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:27:41.319Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:28:48.662Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:28:48.674Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:29:17.886Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:29:17.901Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:29:43.548Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:29:43.561Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:31:47.068Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:31:47.078Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:32:42.449Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:32:42.459Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:33:09.492Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:33:09.512Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:33:30.518Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:33:30.543Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:35:13.687Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:35:13.705Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-06T10:35:21.033Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T10:35:21.042Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-06T11:32:01.771Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T11:32:01.788Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-06T11:33:43.768Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-06T11:33:43.778Z"}

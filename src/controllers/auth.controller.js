@@ -1,13 +1,7 @@
-// ==========================================================================
 // Auth Controller - Authentication Operations
-// ==========================================================================
-
-// ----------------------------- Dependencies -----------------------------
 const AppError = require("../middleware/appError.js");
 const userServices = require("../services/user.services.js");
 const asyncHandler = require("../utils/asyncHandler");
-
-// ==========================================================================
 
 class UserController {
 
@@ -56,6 +50,5 @@ class UserController {
     });
 }
 
-// ==========================================================================
-
 module.exports = new UserController();
+

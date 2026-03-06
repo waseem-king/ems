@@ -1,13 +1,9 @@
-// ==========================================================================
 // User Services - Business Logic for Users
-// ==========================================================================
 
-// ----------------------------- Dependencies -----------------------------
 const AppError = require("../middleware/appError");
 const { UserRepository , UserAnalytics }= require("../repositories/user.repository");
 const { generateToken } = require("../utils/generateToken");
 
-// ==========================================================================
 
 class UserServices {
     /**
@@ -75,10 +71,7 @@ class UserServices {
         return await UserRepository.deleteById(id);
     }
 }
-
-// ==========================================================================
                     //Users aggregations services
-// ==========================================================================
 
 class UserAnalyticsServices{
     async showtUserDashboard(userId, month, year){
@@ -91,3 +84,4 @@ module.exports = {
     UserServices: new UserServices(),
     UserAnalyticsServices: new UserAnalyticsServices()
 }
+

@@ -1,14 +1,8 @@
-// ==========================================================================
 // Expense Services - Business Logic for Expenses
-// ==========================================================================
 
-// ----------------------------- Dependencies -----------------------------
 const AppError = require("../middleware/appError");
 const { expenseRepository } = require("../repositories");
 const { categorizeExpense } = require("../ai/aiClient");
-
-// ==========================================================================
-
 class ExpenseServices {
     /**
      * Calculate how much each participant owes based on split type
@@ -160,15 +154,11 @@ class ExpenseServices {
             remaining: p.amountOwed - (p.paid || 0)
         }));
     }
-
-    // =====================================================================
                 // Expense Aggregation 
-// =====================================================================
     async getExpenseDashboard(ownerType, ownerId){
         return await expenseRepository.getExpenseDashboard(ownerType, ownerId)
     }
 }
 
-// ==========================================================================
-
 module.exports = new ExpenseServices;
+

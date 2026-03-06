@@ -20,3 +20,4 @@ const budgetSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model("Budgets", budgetSchema);
+

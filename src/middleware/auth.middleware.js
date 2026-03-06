@@ -1,12 +1,6 @@
-// ==========================================================================
 // Auth Middleware - Authentication and Authorization
-// ==========================================================================
-
-// ----------------------------- Dependencies -----------------------------
 const jwt = require("jsonwebtoken");
 const { UserRepository }= require("../repositories/user.repository");
-
-// ==========================================================================
 
 /**
  * Middleware to protect routes - verifies JWT token
@@ -74,6 +68,5 @@ const authorize = (...roles) => {
     };
 };
 
-// ==========================================================================
-
 module.exports = { protect, authorize };
+

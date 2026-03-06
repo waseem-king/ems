@@ -1,10 +1,5 @@
-// ==========================================================================
 // Budget Validator - Validation Rules for Budget Operations
-// ==========================================================================
-
-// ----------------------------- Dependencies -----------------------------
 const { body, param } = require("express-validator")
-// ==========================================================================
 
 // Validate creation of an budget
 exports.createBudgetValidator = [
@@ -34,3 +29,4 @@ exports.budgetIdParamValidator = [
         .notEmpty().withMessage("Id is required")
         .isMongoId().withMessage("In-valid mongodb id")
 ]
+

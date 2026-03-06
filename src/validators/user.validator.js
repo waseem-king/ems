@@ -1,11 +1,6 @@
-// ==========================================================================
 // User Validator - Validation Rules for User Operations
-// ==========================================================================
 
-// ----------------------------- Dependencies -----------------------------
 const { body } = require("express-validator");
-
-// ==========================================================================
 
 exports.createUserValidator = [
     body("name")
@@ -23,3 +18,4 @@ exports.createUserValidator = [
         .optional()
         .isMobilePhone("any")
 ];
+

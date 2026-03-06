@@ -9,3 +9,4 @@ const auth0Model = new mongoose.Schema({
 })
 
 module.exports = mongoose.model("auth0Model", auth0Model)
+

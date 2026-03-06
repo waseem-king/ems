@@ -48,3 +48,4 @@ aiWorker.on("completed", (job)=>{
 aiWorker.on("failed", (job, err)=>{
     logger.error(`Job ${job.id} failed:`, err.message)
 })
+

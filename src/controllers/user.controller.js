@@ -1,6 +1,4 @@
-// ==========================================================================
 // User Controller - CRUD Operations for Users
-// ==========================================================================
 
 // ----------------------------- Dependencies -----------------------------
 const mongoose = require("mongoose")
@@ -8,8 +6,6 @@ const logger = require("../config/logger");
 const AppError = require("../middleware/appError");
 const { UserServices, UserAnalyticsServices } = require("../services");
 const asyncHandler = require("../utils/asyncHandler");
-
-// ==========================================================================
 
 class UserController {
     
@@ -120,14 +116,9 @@ class UserController {
 
         res.json({ status: "success", data: message });
     });
-}
 
-// ==========================================================================
-                    // User Aggregations controller class
-// ==========================================================================
-
-class UserAnalyticsController{
-    myDashboard = asyncHandler( async (req, res)=>{
+      // User Aggregations controller class
+       myDashboard = asyncHandler( async (req, res)=>{
         const userId = new mongoose.Types.ObjectId(req.user.id)
         const { month, year } = req.body;
         const numMonth = Number(month);
@@ -135,9 +126,9 @@ class UserAnalyticsController{
         const response = await UserAnalyticsServices.showtUserDashboard(userId, numMonth, numYear)
         res.status(200).json({ status:"success", data:response})
     })
+
 }
 
-module.exports = {
-    userController: new UserController(),
-    UserAnalyticsController: new UserAnalyticsController()
-}
+
+module.exports = UserController;
+

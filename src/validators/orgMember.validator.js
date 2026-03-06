@@ -1,10 +1,6 @@
-// ==========================================================================
 // Organization Member Validator - Validation Rules
-// ==========================================================================
 
 const { body, param } = require("express-validator");
-
-// ==========================================================================
 
 // Validator for creating/updating organization member
 exports.createOrUpdateOrgMemberValidator = [
@@ -56,3 +52,4 @@ exports.orgMemberIdParamValidator = [
     .isMongoId()
     .withMessage("Invalid Organization Member ID format"),
 ];
+

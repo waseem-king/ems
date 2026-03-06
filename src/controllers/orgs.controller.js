@@ -1,15 +1,9 @@
-// ==========================================================================
 // Organization Controller - CRUD Operations for Organizations
-// ==========================================================================
 
-// ----------------------------- Dependencies -----------------------------
 const { default: mongoose } = require("mongoose");
 const AppError = require("../middleware/appError");
 const { orgsServices } = require("../services");
 const asyncHandler = require("../utils/asyncHandler");
-
-// ==========================================================================
-
 class OrgsController {
 
     // ----------------------------- Create Organization -----------------------------
@@ -63,7 +57,5 @@ class OrgsController {
         res.json({ status: "success", data: data });
     });
 }
-
-// ==========================================================================
 
 module.exports = new OrgsController();

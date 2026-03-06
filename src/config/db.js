@@ -1,13 +1,6 @@
-// ==========================================================================
-// Database Configuration - MongoDB Connection
-// ==========================================================================
-
-// ----------------------------- Dependencies -----------------------------
 require("dotenv").config();
 const mongoose = require("mongoose");
 const logger = require("./logger");
-
-// ==========================================================================
 
 /**
  * Connect to MongoDB database
@@ -21,7 +14,5 @@ const connectDB = async () => {
         process.exit(1);
     }
 };
-
-// ==========================================================================
 
 module.exports = connectDB;

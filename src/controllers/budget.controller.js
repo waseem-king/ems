@@ -1,7 +1,5 @@
-
 const { budgetServices } = require("../services");
 const asyncHandler = require("../utils/asyncHandler");
-
 class BudgetController{
     setMyBudget = asyncHandler( async (req, res)=>{
         
@@ -31,3 +29,4 @@ class BudgetController{
 }
 
 module.exports = new BudgetController;
+

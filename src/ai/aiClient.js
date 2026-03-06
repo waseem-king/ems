@@ -1,15 +1,9 @@
-// ==========================================================================
-// AI Client - Interface to AI Expense Categorization Service
-// ==========================================================================
-
 // ----------------------------- Dependencies -----------------------------
 const axios = require('axios');
 
 // ----------------------------- Configuration -----------------------------
 const AI_SERVICE_URL = process.env.AI_SERVICE_URL || 'http://localhost:5000';
 const AI_SERVICE_TIMEOUT = parseInt(process.env.AI_SERVICE_TIMEOUT, 10) || 5000;
-
-// ==========================================================================
 
 /**
  * Categorize an expense based on its title using the AI service
@@ -87,10 +81,9 @@ async function getAvailableCategories() {
     }
 }
 
-// ==========================================================================
-
 module.exports = {
     categorizeExpense,
     isAIServiceAvailable,
     getAvailableCategories
 };
+

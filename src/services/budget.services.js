@@ -24,3 +24,4 @@ class BudgetService{
 }
 
 module.exports = new BudgetService;
+

@@ -74,3 +74,4 @@ async function seedCategories() {
 }
 
 seedCategories();
+

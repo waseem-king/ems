@@ -1,14 +1,9 @@
-// ==========================================================================
 // Expense Controller - CRUD Operations for Expenses
-// ==========================================================================
 
-// ----------------------------- Dependencies -----------------------------
 const { default: mongoose } = require("mongoose");
 const AppError = require("../middleware/appError");
 const { expenseServices } = require("../services");
 const asyncHandler = require("../utils/asyncHandler");
-
-// ==========================================================================
 
 class ExpenseController {
 
@@ -75,6 +70,5 @@ class ExpenseController {
 
 }
 
-// ==========================================================================
-
 module.exports = new ExpenseController();
+

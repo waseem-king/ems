@@ -1,12 +1,6 @@
-// ==========================================================================
 // Validate Middleware - Express Validator Middleware
-// ==========================================================================
-
-// ----------------------------- Dependencies -----------------------------
 const { validationResult } = require("express-validator");
 const AppError = require("./appError");
-
-// ==========================================================================
 
 /**
  * Middleware to handle validation errors
@@ -23,3 +17,4 @@ module.exports = (req, res, next) => {
   }
   next();
 };
+

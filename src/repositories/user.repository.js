@@ -185,3 +185,4 @@ module.exports = {
     UserRepository: new UserRepository(),
     UserAnalytics: new UserAnalytics()
 };
+

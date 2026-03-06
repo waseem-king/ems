@@ -1,6 +1,4 @@
-// ==========================================================================
 // Services Index - Export All Service Modules
-// ==========================================================================
 
 const authService = require("./auth.service");
 const budgetServices = require("./budget.services");
@@ -9,7 +7,6 @@ const orgMemServices = require("./orgMem.services");
 const orgsServices = require("./orgs.services");
 const {UserServices, UserAnalyticsServices} = require("./user.services");
 
-// ==========================================================================
 
 module.exports = {
     authService,
@@ -20,3 +17,4 @@ module.exports = {
     expenseServices,
     budgetServices,
 };
+

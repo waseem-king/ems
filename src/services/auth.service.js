@@ -1,13 +1,7 @@
-// ==========================================================================
 // Auth Service - Authentication Business Logic
-// ==========================================================================
-
-// ----------------------------- Dependencies -----------------------------
 const AppError = require("../middleware/appError");
 const userRepo = require("../repositories/user.repository");
 const { generateToken } = require("../utils/generateToken");
-
-// ==========================================================================
 
 class AuthServices {
     /**
@@ -79,6 +73,5 @@ class AuthServices {
     };
 }
 
-// ==========================================================================
-
 module.exports = new AuthServices;
+

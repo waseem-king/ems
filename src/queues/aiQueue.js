@@ -21,3 +21,4 @@ connection.on("connect", () => console.log("✅ Redis connected successfully"));
 const aiQueue = new Queue('aiQueue', { connection });
 
 module.exports = { aiQueue };
+

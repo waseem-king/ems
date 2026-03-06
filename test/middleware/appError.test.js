@@ -18,3 +18,4 @@ describe("AppError Class", ()=>{
         expect(error.statusCode).toBe(500)
     })
 })
+

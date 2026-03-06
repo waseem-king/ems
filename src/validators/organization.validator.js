@@ -1,13 +1,5 @@
-// ==========================================================================
-
-// ==========================================================================
 // Organization Validator - Validation Rules for Organization Operations
-// ==========================================================================
-
-// ----------------------------- Dependencies -----------------------------
 const { body, param } = require("express-validator");
-
-// ==========================================================================
 
 // Create / Update Organization Validator
 exports.createOrUpdateOrganizationValidator = [
@@ -59,3 +51,4 @@ exports.organizationIdParamValidator = [
     .isMongoId()
     .withMessage("Invalid Organization ID format"),
 ];
+

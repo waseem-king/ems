@@ -1,11 +1,5 @@
-// ==========================================================================
 // Authorize Expense Middleware - Verify Expense Ownership
-// ==========================================================================
-
-// ----------------------------- Dependencies -----------------------------
 const { expenseModel } = require("../models");
-
-// ==========================================================================
 
 /**
  * Middleware to verify user is the owner of the expense
@@ -27,3 +21,4 @@ module.exports = async (req, res, next) => {
     req.expense = expense;
     next();
 };
+

@@ -1,13 +1,9 @@
-// ==========================================================================
-// Organization Member Controller - CRUD Operations for Organization Members
-// ==========================================================================
 
-// ----------------------------- Dependencies -----------------------------
+// Organization Member Controller - CRUD Operations for Organization Members
+
 const AppError = require("../middleware/appError");
 const { orgMemServices } = require("../services");
 const asyncHandler = require("../utils/asyncHandler");
-
-// ==========================================================================
 
 class OrgMemController {
 
@@ -52,6 +48,6 @@ class OrgMemController {
     });
 }
 
-// ==========================================================================
 
 module.exports = new OrgMemController();
+

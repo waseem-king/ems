@@ -1,11 +1,5 @@
-// ==========================================================================
 // Expense Validator - Validation Rules for Expense Operations
-// ==========================================================================
-
-// ----------------------------- Dependencies -----------------------------
 const { body, param } = require("express-validator")
-// ==========================================================================
-
 // Validate creation of an expense
 
 exports.createExpenseValidator = [
@@ -61,3 +55,4 @@ exports.expenseIdParamValidator = [
     .isMongoId()
     .withMessage("Invalid Expense ID format"),
 ];
+

@@ -32,3 +32,4 @@ describe("ExpenseService - getExpenseById", ()=>{
         ).rejects.toThrow("Expense not found")
     })
 })
+

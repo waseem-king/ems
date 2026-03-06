@@ -1,7 +1,4 @@
-// ==========================================================================
 // App Error Class - Custom Error Handler
-// ==========================================================================
-
 class AppError extends Error {
     constructor(msg, statusCode) {
         super(msg),
@@ -12,6 +9,5 @@ class AppError extends Error {
     }
 }
 
-// ==========================================================================
-
 module.exports = AppError;
+
