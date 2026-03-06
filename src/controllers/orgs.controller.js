@@ -3,6 +3,7 @@
 const { default: mongoose } = require("mongoose");
 const AppError = require("../middleware/appError");
 const { orgsServices } = require("../services");
+const newOrgsServices = new orgsServices();
 const asyncHandler = require("../utils/asyncHandler");
 class OrgsController {
 
@@ -14,28 +15,28 @@ class OrgsController {
             throw new AppError("Organization data is required", 400);
         }
 
-        const org = await orgsServices.createOrg(req.body);
+        const org = await newOrgsServices.createOrg(req.body);
         res.json({ status: "success", data: org });
     });
 
 
     // ----------------------------- Get All Organizations -----------------------------
     getAllOrgs = asyncHandler(async (req, res) => {
-        const data = await orgsServices.getAllOrgs();
+        const data = await newOrgsServices.getAllOrgs();
         res.json({ status: "success", data: data });
     });
 
 
     // ----------------------------- Get Organization by ID -----------------------------
     getOne = asyncHandler(async (req, res) => {
-        const data = await orgsServices.getOne(req.params.id);
+        const data = await newOrgsServices.getOne(req.params.id);
         res.json({ status: "success", data: data });
     });
 
 
     // ----------------------------- Update Organization -----------------------------
     updateOne = asyncHandler(async (req, res) => {
-        const data = await orgsServices.updateOrg(
+        const data = await newOrgsServices.updateOrg(
             req.params.id,
             req.body
         );
@@ -45,7 +46,7 @@ class OrgsController {
 
     // ----------------------------- Delete Organization -----------------------------
     deleteOrg = asyncHandler(async (req, res) => {
-        const data = await orgsServices.deleteOrg(req.params.id);
+        const data = await newOrgsServices.deleteOrg(req.params.id);
         res.json({ status: "success", data: data });
     });
 
@@ -53,9 +54,9 @@ class OrgsController {
     orgDashboard = asyncHandler(async (req, res) => {
         const orgId = new mongoose.Types.ObjectId(req.user.id)
         const query = req.query;
-        const data = await orgsServices.getOrgDashboard(orgId, query)
+        const data = await newOrgsServices.getOrgDashboard(orgId, query)
         res.json({ status: "success", data: data });
     });
 }
 
-module.exports = new OrgsController();
+module.exports = OrgsController;

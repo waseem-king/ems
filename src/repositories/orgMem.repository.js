@@ -26,5 +26,5 @@ class OrgMemRepo{
     }
 }
 
-module.exports = new OrgMemRepo;
+module.exports = OrgMemRepo;
 

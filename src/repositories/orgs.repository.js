@@ -28,10 +28,7 @@ class OrgsRepository {
     await organizationModel.findByIdAndDelete(id)
     return { message: "Organization Deleted successfully" }
   }
-
-  // =================================================================
   // Organization aggregation
-  // =================================================================
 
   async getOrgDashboard(orgId, query) {
     const match = { ownerType: "organization", ownerId: orgId };
@@ -197,5 +194,5 @@ class OrgsRepository {
 }
 
 
-module.exports = new OrgsRepository;
+module.exports = OrgsRepository;
 

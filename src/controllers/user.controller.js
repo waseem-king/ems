@@ -4,15 +4,17 @@
 const mongoose = require("mongoose")
 const logger = require("../config/logger");
 const AppError = require("../middleware/appError");
-const { UserServices, UserAnalyticsServices } = require("../services");
+const { UserServices } = require("../services");
+const newUserServices = new UserServices();
 const asyncHandler = require("../utils/asyncHandler");
+
 
 class UserController {
     
     // ----------------------------- Create User -----------------------------
     createUser = asyncHandler(async (req, res) => {
         const data = req.body;
-        const { user, token } = await UserServices.createUser(data);
+        const { user, token } = await newUserServices.createUser(data);
 
         if (!user) {
             throw new AppError("User could not be created", 400);
@@ -30,7 +32,7 @@ class UserController {
             throw new AppError("Email or password not provided", 400);
         }
 
-        const user = await UserServices.loginUser(req.body.email, req.body.password);
+        const user = await newUserServices.loginUser(req.body.email, req.body.password);
 
         if (!user) {
             throw new AppError("User not found", 404);
@@ -42,7 +44,7 @@ class UserController {
 
     // ----------------------------- Get User by ID -----------------------------
     findExistingUser = asyncHandler(async (req, res) => {
-        const user = await UserServices.findExistingUser(req.params.id);
+        const user = await newUserServices.findExistingUser(req.params.id);
 
         if (!user) {
             throw new AppError("User not found", 404);
@@ -54,7 +56,7 @@ class UserController {
 
     // ----------------------------- Get All Users -----------------------------
     findAll = asyncHandler(async (req, res) => {
-        const user = await UserServices.findAll();
+        const user = await newUserServices.findAll();
 
         if (!user) {
             throw new AppError("User not found", 404);
@@ -69,7 +71,7 @@ class UserController {
         const email = req.query;
 
         if (email) {
-            const user = await UserServices.findByEmail(email);
+            const user = await newUserServices.findByEmail(email);
 
             if (!user) {
                 throw new AppError("User not found", 404);
@@ -84,13 +86,13 @@ class UserController {
 
     // ----------------------------- Update User by ID -----------------------------
     updateById = asyncHandler(async (req, res) => {
-        const user = await UserServices.findExistingUser(req.params.id);
+        const user = await newUserServices.findExistingUser(req.params.id);
 
         if (!user) {
             throw new AppError("User not found", 404);
         }
 
-        const newUser = await UserServices.updateById(req.params.id, req.body);
+        const newUser = await newUserServices.updateById(req.params.id, req.body);
 
         if (!newUser) {
             throw new AppError("User not found", 404);
@@ -102,13 +104,13 @@ class UserController {
 
     // ----------------------------- Delete User by ID -----------------------------
     deleteById = asyncHandler(async (req, res) => {
-        const user = await UserServices.findExistingUser(req.params.id);
+        const user = await newUserServices.findExistingUser(req.params.id);
 
         if (!user) {
             throw new AppError("User not found", 404);
         }
 
-        const message = await UserServices.deleteById(req.params.id);
+        const message = await newUserServices.deleteById(req.params.id);
 
         if (!message) {
             throw new AppError("User not found", 404);
@@ -123,7 +125,7 @@ class UserController {
         const { month, year } = req.body;
         const numMonth = Number(month);
         const numYear = Number(year)
-        const response = await UserAnalyticsServices.showtUserDashboard(userId, numMonth, numYear)
+        const response = await newUserServices.showtUserDashboard(userId, numMonth, numYear)
         res.status(200).json({ status:"success", data:response})
     })
 

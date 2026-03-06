@@ -160,5 +160,5 @@ class ExpenseServices {
     }
 }
 
-module.exports = new ExpenseServices;
+module.exports = ExpenseServices;
 

@@ -48,16 +48,7 @@ class UserRepository {
         return await userModel.findByIdAndUpdate(id, data, { new: true, runValidators: true })
     }
 
-
-}
-
-// ==============================================================
-
-// Aggregations
-
-// ==============================================================
-class UserAnalytics {
-    // monthly spending for a single user
+        // monthly spending for a single user
 async getUserDashboard(userId, month, year) {
 
   const objectId = new mongoose.Types.ObjectId(userId);
@@ -77,9 +68,7 @@ async getUserDashboard(userId, month, year) {
     {
       $facet: {
 
-        // ==========================
         // 1️⃣ Monthly Spending
-        // ==========================
         monthlySpending: [
           {
             $group: {
@@ -94,9 +83,7 @@ async getUserDashboard(userId, month, year) {
           { $sort: { "_id.year": 1, "_id.month": 1 } }
         ],
 
-        // ==========================
         // 2️⃣ Category Wise
-        // ==========================
         categoryWise: [
           {
             $lookup: {
@@ -116,18 +103,14 @@ async getUserDashboard(userId, month, year) {
           { $sort: { total: -1 } }
         ],
 
-        // ==========================
         // 3️⃣ Top Expenses
-        // ==========================
         topExpenses: [
           { $sort: { amount: -1 } },
           { $limit: 5 },
           { $project: { title: 1, amount: 1, date: 1 } }
         ],
 
-        // ==========================
         // 4️⃣ Last 7 Days
-        // ==========================
         last7Days: [
           { $match: { date: { $gte: last7days } } },
           {
@@ -139,9 +122,7 @@ async getUserDashboard(userId, month, year) {
           { $sort: { _id: 1 } }
         ],
 
-        // ==========================
         // 5️⃣ Avg Daily (Selected Month)
-        // ==========================
         avgDailySpending: [
           {
             $match: {
@@ -179,10 +160,4 @@ async getUserDashboard(userId, month, year) {
 }
 }
 
-
-
-module.exports = {
-    UserRepository: new UserRepository(),
-    UserAnalytics: new UserAnalytics()
-};
-
+module.exports = UserRepository;

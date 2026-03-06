@@ -3,6 +3,7 @@
 
 const AppError = require("../middleware/appError");
 const { orgMemServices } = require("../services");
+const newOrgMemServices = new orgMemServices();
 const asyncHandler = require("../utils/asyncHandler");
 
 class OrgMemController {
@@ -15,39 +16,39 @@ class OrgMemController {
             throw new AppError("Organization Member data is required", 400);
         }
 
-        const orgMember = await orgMemServices.createOrgMem(data);
+        const orgMember = await newOrgMemServices.createOrgMem(data);
         res.json({ status: "success", data: orgMember });
     });
 
 
     // ----------------------------- Get All Organization Members -----------------------------
     getAllOrgMem = asyncHandler(async (req, res) => {
-        const response = await orgMemServices.getAllOrgMem();
+        const response = await newOrgMemServices.getAllOrgMem();
         res.json({ status: "success", data: response });
     });
 
 
     // ----------------------------- Get Organization Member by ID -----------------------------
     getOneOrgMem = asyncHandler(async (req, res) => {
-        const response = await orgMemServices.getOneOrgMem(req.params.id);
+        const response = await newOrgMemServices.getOneOrgMem(req.params.id);
         res.json({ status: "success", data: response });
     });
 
 
     // ----------------------------- Update Organization Member -----------------------------
     updateOrgMem = asyncHandler(async (req, res) => {
-        const response = await orgMemServices.updateOrgMem(req.params.id, req.body);
+        const response = await newOrgMemServices.updateOrgMem(req.params.id, req.body);
         res.json({ status: "success", data: response });
     });
 
 
     // ----------------------------- Delete Organization Member -----------------------------
     deleteOrgMem = asyncHandler(async (req, res) => {
-        const response = await orgMemServices.deleteOrgMem(req.params.id);
+        const response = await newOrgMemServices.deleteOrgMem(req.params.id);
         res.json({ status: "success", data: response });
     });
 }
 
 
-module.exports = new OrgMemController();
+module.exports = OrgMemController;
 
