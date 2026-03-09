@@ -22,3 +22,6 @@ build/
 # os-specific files
 /DS_Store
 Thumbs.db
+
+# ignore the pdf file 
+src/reports/
