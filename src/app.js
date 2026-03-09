@@ -117,6 +117,11 @@ app.get("/profile", (req, res) => {
 
 app.use('/admin/queues', bullBoardRouter);
 
+// test email
+app.use("/test", require("../test/services/email.service.test"))
+// here are the email worker and redis files 
+require("./workers/monthlyReport.worker")
+require("./schedulers/monthlyReport.cron")
 // Error Handling Middleware
 
 app.use((err, req, res, next) => {
