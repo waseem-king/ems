@@ -1030,3 +1030,12 @@
 {"level":"info","message":"::1 - - [09/Mar/2026:16:39:04 +0000] \"GET /test/test-email HTTP/1.1\" 200 38 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-09T16:39:04.085Z"}
 {"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-09T16:45:42.024Z"}
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-03-09T16:45:42.028Z"}
+{"level":"info","message":"::1 - - [09/Mar/2026:17:20:20 +0000] \"GET /test/test-email HTTP/1.1\" 200 38 \"-\" \"PostmanRuntime/7.51.1\"","timestamp":"2026-03-09T17:20:20.402Z"}
+{"level":"error","message":"Mongo db connection error: querySrv ESERVFAIL _mongodb._tcp.cluster0.qvgcdm6.mongodb.net","timestamp":"2026-03-10T06:59:09.866Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-10T07:15:22.398Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-10T07:15:22.409Z"}
+{"level":"info","message":"::1 - - [10/Mar/2026:08:58:38 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36\"","timestamp":"2026-03-10T08:58:38.251Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-10T17:27:29.901Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-10T17:27:29.917Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-00.qvgcdm6.mongodb.net","timestamp":"2026-03-10T17:27:46.635Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-10T17:27:46.643Z"}

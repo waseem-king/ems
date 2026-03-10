@@ -114,11 +114,11 @@ app.get("/profile", (req, res) => {
 });
 
 // BullMQ dashboard 
-
 app.use('/admin/queues', bullBoardRouter);
 
-// test email
-app.use("/test", require("../test/services/email.service.test"))
+// Test routes for queues
+app.use("/test", require("./routes/test.routes"))
+
 // here are the email worker and redis files 
 require("./workers/monthlyReport.worker")
 require("./schedulers/monthlyReport.cron")

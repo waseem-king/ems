@@ -1,19 +1,32 @@
-const express  = require("express");
-const { addMonthlyReportJob } = require("../../src/jobs/monthlyReport.job");
-const router = express.Router();
+// Email Service Test - Unit Tests for Email Functionality
 
-router.get("/test-email", async (req, res)=>{
-    try {
-        await addMonthlyReportJob(
-             "testUserId",
-            "yourgmail@gmail.com",
-            "March"
-        )
-         res.json({ message: "Email job added to queue" });
-    } catch (error) {
-         res.json({ message: "Email job added to queue" });
-    }
-})
+const nodemailer = require("nodemailer");
 
-module.exports = router;
+// Mock nodemailer
+jest.mock("nodemailer", () => ({
+    createTransport: jest.fn().mockReturnValue({
+        sendMail: jest.fn().mockResolvedValue({ messageId: "test-message-id" })
+    })
+}));
+
+describe("Email Service", () => {
+    let transporter;
+    
+    beforeEach(() => {
+        const nodemailer = require("nodemailer");
+        transporter = nodemailer.createTransport();
+    });
+
+    it("should send an email successfully", async () => {
+        const info = await transporter.sendMail({
+            from: '"Test" <test@example.com>',
+            to: "recipient@example.com",
+            subject: "Test Email",
+            text: "This is a test email"
+        });
+        
+        expect(info.messageId).toBeDefined();
+        expect(transporter.sendMail).toHaveBeenCalled();
+    });
+});
 

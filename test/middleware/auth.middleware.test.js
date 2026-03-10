@@ -1,9 +1,31 @@
-const { protect, authorize } = require("../../src/middleware/auth.middleware");
 const jwt = require("jsonwebtoken");
-const { UserRepository } = require("../../src/repositories/user.repository");
 
+// Mock the user.repository module - need to handle both static and instance calls
+jest.mock("../../src/repositories/user.repository", () => {
+    // Create a mock function for findExistingUser
+    const mockFindExistingUser = jest.fn().mockResolvedValue({ id: "user123", role: "admin" });
+    
+    // Create a mock class that can be called as both a constructor (new) and statically
+    const MockUserRepository = jest.fn().mockImplementation(() => ({
+        // Instance method
+        findExistingUser: mockFindExistingUser
+    }));
+    
+    // Also assign as static method
+    MockUserRepository.findExistingUser = mockFindExistingUser;
+    
+    return {
+        __esModule: true,
+        default: MockUserRepository,
+        UserRepository: MockUserRepository
+    };
+});
+
+// Mock jsonwebtoken
 jest.mock("jsonwebtoken");
-jest.mock("../../src/repositories/user.repository");
+
+// Import after mocks are set up
+const { protect, authorize } = require("../../src/middleware/auth.middleware");
 
 describe("Auth Middleware - protect", () => {
   let req, res, next;
@@ -12,11 +34,11 @@ describe("Auth Middleware - protect", () => {
     req = { headers: { authorization: "Bearer fakeToken" } };
     res = { status: jest.fn().mockReturnThis(), json: jest.fn() };
     next = jest.fn();
+    jest.clearAllMocks();
   });
 
   it("should call next if token is valid", async () => {
     jwt.verify.mockReturnValue({ id: "user123" });
-    UserRepository.findExistingUser.mockResolvedValue({ id: "user123", role: "admin" });
 
     await protect(req, res, next);
 

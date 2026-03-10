@@ -1,5 +1,4 @@
 // User Routes - User Management Endpoints
-
 const express = require("express");
 const router = express.Router();
 

@@ -1,7 +1,4 @@
-// ==========================================================================
 // Async Handler - Wrapper for Async Route Handlers
-// ==========================================================================
-
 /**
  * Wrapper function to handle async errors in route handlers
  */
@@ -10,8 +7,6 @@ function asyncHandler(fn) {
         Promise.resolve(fn(req, res, next)).catch(next);
     };
 }
-
-// ==========================================================================
 
 module.exports = asyncHandler;
 
