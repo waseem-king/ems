@@ -1,4 +1,5 @@
 const AppError = require("../../src/middleware/appError");
+const jest = require("jest");
 
 // Mock the repository - must be a class constructor that returns an instance
 jest.mock("../../src/repositories", () => {

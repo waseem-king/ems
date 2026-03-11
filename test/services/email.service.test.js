@@ -1,6 +1,7 @@
 // Email Service Test - Unit Tests for Email Functionality
 
 const nodemailer = require("nodemailer");
+const jest = require("jest");
 
 // Mock nodemailer
 jest.mock("nodemailer", () => ({
