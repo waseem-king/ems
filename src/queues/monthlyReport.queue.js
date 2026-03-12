@@ -10,3 +10,4 @@ const monthlyReportQueue = new Queue("monthlyReportQueue", {
 });
 
 module.exports = { monthlyReportQueue };
+

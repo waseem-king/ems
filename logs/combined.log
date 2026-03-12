@@ -1099,3 +1099,13 @@
 {"level":"info","message":"::1 - - [10/Mar/2026:17:41:26 +0000] \"GET /admin/queues/api/queues?activeQueue=monthlyReportQueue&status=waiting&page=1&jobsPerPage=10 HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36\"","timestamp":"2026-03-10T17:41:26.522Z"}
 {"level":"info","message":"::1 - - [10/Mar/2026:17:42:26 +0000] \"GET /admin/queues/api/queues?activeQueue=monthlyReportQueue&status=waiting&page=1&jobsPerPage=10 HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36\"","timestamp":"2026-03-10T17:42:26.478Z"}
 {"level":"info","message":"::1 - - [10/Mar/2026:17:43:26 +0000] \"GET /admin/queues/api/queues?activeQueue=monthlyReportQueue&status=waiting&page=1&jobsPerPage=10 HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36\"","timestamp":"2026-03-10T17:43:26.501Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-12T07:27:49.050Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-12T07:27:49.060Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-12T07:29:49.261Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-12T07:29:49.270Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-12T07:32:47.647Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-12T07:32:47.687Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-01.qvgcdm6.mongodb.net","timestamp":"2026-03-12T07:34:42.712Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-12T07:34:42.729Z"}
+{"level":"info","message":"Mongo db connected host is ac-jwhfra1-shard-00-02.qvgcdm6.mongodb.net","timestamp":"2026-03-12T07:36:51.478Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-03-12T07:36:51.489Z"}

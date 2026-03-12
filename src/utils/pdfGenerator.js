@@ -2,6 +2,11 @@ const PDFDocument = require("pdfkit");
 const fs = require("fs");
 const path = require("path");
 
+// get the constants for currency
+const { CURRENCY_RATES, CURRENCY_SYMBOLS } = require("../constants/currency.constants");
+
+
+
 const generateMonthlyReport = (expenses, month) => {
 
   return new Promise((resolve, reject) => {
@@ -109,9 +114,19 @@ const generateMonthlyReport = (expenses, month) => {
 
         drawTableHeader();
       }
+      const isPkrMatch = expense.defaultCurrency === CURRENCY_SYMBOLS.PKR && expense.currency === CURRENCY_SYMBOLS.PKR;
+      const isUsdMatch = expense.defaultCurrency === CURRENCY_SYMBOLS.USD && expense.currency === CURRENCY_SYMBOLS.USD;
 
-      total += expense.amount;
-
+      if(isPkrMatch || isUsdMatch){
+            total += expense.amount;
+      }else if(expense.defaultCurrency === CURRENCY_SYMBOLS.PKR && expense.currency === CURRENCY_SYMBOLS.USD){
+            const dollarToPkr = expense.amount * CURRENCY_RATES.USD_TO_PKR;
+            total+=dollarToPkr
+      }else if(expense.defaultCurrency === CURRENCY_SYMBOLS.USD && expense.currency === CURRENCY_SYMBOLS.PKR){
+            const pkrToDollar = expense.amount * CURRENCY_RATES.PKR_TO_USD;
+            total+=pkrToDollar;
+      }
+     
       // Zebra row background
       if (index % 2 === 0) {
         doc
@@ -124,7 +139,7 @@ const generateMonthlyReport = (expenses, month) => {
       doc.text(expense.title, descX, y);
 
       doc.text(
-        `$${expense.amount.toFixed(2)}`,
+        `${expense.currency} ${expense.amount.toFixed(2)}`,
         amountX,
         y
       );
@@ -154,9 +169,9 @@ const generateMonthlyReport = (expenses, month) => {
       .font("Helvetica-Bold")
       .fontSize(12);
 
-    doc.text(`Total Expenses: $${total.toFixed(2)}`, 350, summaryY + 15);
+    doc.text(`Total Expenses: ${expenses[0].defaultCurrency === CURRENCY_SYMBOLS.PKR ? "PKR":"$"} ${total.toFixed(2)}`, 350, summaryY + 15);
 
-    doc.text(`Average Expense: $${avg.toFixed(2)}`, 350, summaryY + 35);
+    doc.text(`Average Expense: ${expenses[0].defaultCurrency === CURRENCY_SYMBOLS.USD ? "$":"PKR"} ${avg.toFixed(2)}`, 350, summaryY + 35);
 
     /* =========================
        FOOTER (FIXED POSITION)

@@ -1,13 +1,13 @@
 // Auth Controller - Authentication Operations
 const AppError = require("../middleware/appError.js");
 const UserServices = require("../services/user.services.js");
-const newUserServices = new UserServices();
 const asyncHandler = require("../utils/asyncHandler");
 
 class UserController {
 
     // ----------------------------- Register User -----------------------------
     registerUser = asyncHandler(async (req, res) => {
+        const newUserServices = new UserServices();
         const user = await newUserServices.createUser(req.body);
         res
             .status(200)
@@ -22,7 +22,7 @@ class UserController {
         if (!email || !password) {
             throw new AppError("Email or Password is missing", 400);
         }
-
+        const newUserServices = new UserServices();
         const user = await newUserServices.loginUser(email, password)
         res
             .status(200)
@@ -32,6 +32,7 @@ class UserController {
 
     // ----------------------------- Get Current User -----------------------------
     getMe = asyncHandler(async (req, res) => {
+        const newUserServices = new UserServices();
         const user = await newUserServices.getMe(req.oidc.user);
         res.json(user);
     });
@@ -39,6 +40,7 @@ class UserController {
 
     // ----------------------------- Update Current User -----------------------------
     updateMe = asyncHandler(async (req, res) => {
+        const newUserServices = new UserServices();
         const user = await newUserServices.updateMe(req.oidc.user, req.body);
         res.json(user);
     });
@@ -46,6 +48,7 @@ class UserController {
 
     // ----------------------------- Delete Current User -----------------------------
     deleteMe = asyncHandler(async (req, res) => {
+        const newUserServices = new UserServices();
         await newUserServices.deleteMe(req.oidc.user);
         res.json({ message: "User Deleted Successfully" });
     });

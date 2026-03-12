@@ -5,79 +5,76 @@ const { UserRepository } = require("../repositories");
 const newUserRepository = new UserRepository();
 const { generateToken } = require("../utils/generateToken");
 
-
 class UserServices {
-    /**
-     * Create a new user
-     */
-    async createUser(data) {
-        const existingUser = await newUserRepository.findByEmail(data.email);
-        if (existingUser) {
-            throw new AppError("User already exist", 400);
-        }
-
-        const user = await newUserRepository.create(data);
-        const token = generateToken({ id: user._id });
-
-        return { user, token };
+  /**
+   * Create a new user
+   */
+  async createUser(data) {
+    const existingUser = await newUserRepository.findByEmail(data.email);
+    if (existingUser) {
+      throw new AppError("User already exist", 400);
     }
 
-    /**
-     * Login user with email and password
-     */
-    async loginUser(email, password) {
-        const user = await newUserRepository.findByEmail(email);
+    const user = await newUserRepository.create(data);
+    const token = generateToken({ id: user._id });
 
-        if (!user) {
-            throw new AppError("Invalid credentials", 401);
-        }
+    return { user, token };
+  }
 
-        const token = generateToken({ id: user._id });
+  /**
+   * Login user with email and password
+   */
+  async loginUser(email, password) {
+    const user = await newUserRepository.findByEmail(email);
 
-        return { user, token };
+    if (!user) {
+      throw new AppError("Invalid credentials", 401);
     }
 
-    /**
-     * Find existing user by ID
-     */
-    async findExistingUser(id) {
-        return await newUserRepository.findExistingUser(id);
-    }
+    const token = generateToken({ id: user._id });
 
-    /**
-     * Find user by email
-     */
-    async findByEmail(email) {
-        return await newUserRepository.findByEmail(email);
-    }
+    return { user, token };
+  }
 
-    /**
-     * Find all users
-     */
-    async findAll() {
-        return await newUserRepository.findAll();
-    }
+  /**
+   * Find existing user by ID
+   */
+  async findExistingUser(id) {
+    return await newUserRepository.findExistingUser(id);
+  }
 
-    /**
-     * Update user by ID
-     */
-    async updateById(id, data) {
-        return await newUserRepository.updateById(id, data);
-    }
+  /**
+   * Find user by email
+   */
+  async findByEmail(email) {
+    return await newUserRepository.findByEmail(email);
+  }
 
-    /**
-     * Delete user by ID
-     */
-    async deleteById(id) {
-        return await newUserRepository.deleteById(id);
-    }
-      //Users aggregations services
-        async showtUserDashboard(userId, month, year){
-        const response = await UserAnalytics.getUserDashboard(userId, month, year)
-        return response;
-    }
+  /**
+   * Find all users
+   */
+  async findAll() {
+    return await newUserRepository.findAll();
+  }
+
+  /**
+   * Update user by ID
+   */
+  async updateById(id, data) {
+    return await newUserRepository.updateById(id, data);
+  }
+
+  /**
+   * Delete user by ID
+   */
+  async deleteById(id) {
+    return await newUserRepository.deleteById(id);
+  }
+  //Users aggregations services
+  async showtUserDashboard(userId, month, year) {
+    const response = await UserAnalytics.getUserDashboard(userId, month, year);
+    return response;
+  }
 }
-                  
 
 module.exports = UserServices;
-
