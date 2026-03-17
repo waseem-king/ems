@@ -72,11 +72,12 @@ class UserController {
   // ----------------------------- Get User by ID -----------------------------
   findExistingUser = asyncHandler(async (req, res) => {
     const newUserServices = new UserServices();
-    console.log("Profle = ", req.body)
+    console.log("Profle === ", req.user)
     const user = await newUserServices.findExistingUser(req.user?.id);
     if (!user) {
       throw new AppError("User not found", 404);
     }
+    console.log("Find existing user", user)
     res.json({ status: "success", data: user });
   });
 
