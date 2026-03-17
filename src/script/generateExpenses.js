@@ -6,10 +6,9 @@ const Organization = require("../models/organization.model");
 const Category = require("../models/category.model");
 const { faker } = require("@faker-js/faker");
 
-const MONGO_URI = process.env.MONGO_URI || `mongodb+srv://waseem_db_user:wasi7Allah@cluster0.qvgcdm6.mongodb.net/test`;
-
 async function connectDB() {
-  await mongoose.connect(MONGO_URI);
+  const { default: connectDB } = await import('../config/db.js');
+  await connectDB();
   console.log("✅ MongoDB connected");
 }
 

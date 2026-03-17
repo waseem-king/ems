@@ -22,17 +22,20 @@ router.post("/users", createUserValidator, validate, newUserController.createUse
 // User login
 router.post("/user", validate, newUserController.loginUser);
 
+// post request to generte refresh token
+router.post("/auth/refresh", newUserController.refreshToken);
+
 // Get all users
 router.get("/users", protect, newUserController.findAll);
 
 // Get user by ID
-router.get("/users/:id", protect, newUserController.findExistingUser);
+router.get("/users/me", protect, newUserController.findExistingUser);
 
 // Get user by email
 router.get("/users/email/:email", protect, newUserController.findByEmail);
 
 // Update user by ID
-router.put("/users/:id", protect, newUserController.updateById);
+router.put("/users/me", protect, newUserController.updateById);
 
 // Delete user by ID
 router.delete("/users/:id", protect, newUserController.deleteById);

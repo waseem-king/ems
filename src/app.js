@@ -91,6 +91,7 @@ app.use(express.static("./public"));
 // User routes
 app.use("/api", limiter, userRoutes);
 
+
 // Organization routes
 app.use("/api", orgRoutes);
 

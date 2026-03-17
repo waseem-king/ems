@@ -3,7 +3,6 @@
 const AppError = require("../middleware/appError");
 const { UserRepository } = require("../repositories");
 const newUserRepository = new UserRepository();
-const { generateToken } = require("../utils/generateToken");
 
 class UserServices {
   /**
@@ -14,11 +13,8 @@ class UserServices {
     if (existingUser) {
       throw new AppError("User already exist", 400);
     }
-
     const user = await newUserRepository.create(data);
-    const token = generateToken({ id: user._id });
-
-    return { user, token };
+    return { user };
   }
 
   /**
@@ -30,10 +26,7 @@ class UserServices {
     if (!user) {
       throw new AppError("Invalid credentials", 401);
     }
-
-    const token = generateToken({ id: user._id });
-
-    return { user, token };
+    return user;
   }
 
   /**

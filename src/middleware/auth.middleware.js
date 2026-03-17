@@ -1,6 +1,7 @@
 // Auth Middleware - Authentication and Authorization
+require("dotenv").config();
 const jwt = require("jsonwebtoken");
-const { UserRepository }= require("../repositories/user.repository");
+const UserRepository = require("../repositories/user.repository");
 
 /**
  * Middleware to protect routes - verifies JWT token
@@ -21,10 +22,11 @@ const protect = async (req, res, next) => {
         token = req.headers.authorization.split(" ")[1];
 
         // 3️⃣ Verify token
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const decoded = jwt.verify(token, process.env.JWT_ACCESS_SECRET);
 
         // 4️⃣ Get user from DB
-        const user = await UserRepository.findExistingUser(decoded.id);
+        const repo = new UserRepository();
+        const user = await repo.findExistingUser(decoded.id);
 
         if (!user) {
             return res.status(401).json({

@@ -1,10 +1,14 @@
 // User Controller - CRUD Operations for Users
 // ----------------------------- Dependencies -----------------------------
+require("dotenv").config();
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken")
 const logger = require("../config/logger");
 const AppError = require("../middleware/appError");
 const { UserServices } = require("../services");
 const asyncHandler = require("../utils/asyncHandler");
+const { generateAccessToken, generateRefreshToken } = require("../utils/generateToken");
+
 
 class UserController {
   // ----------------------------- Create User -----------------------------
@@ -32,13 +36,44 @@ class UserController {
     if (!user) {
       throw new AppError("User not found", 404);
     }
-    res.json({ status: "success", data: user });
+    const payload = {
+      id: user._id
+    }
+    const accessToken = generateAccessToken(payload)
+    const refreshToken = generateRefreshToken(payload)
+
+    // 1. Set the cookie first
+    res.cookie("refreshToken", refreshToken, {
+      httpOnly: true,
+      secure: true, // true in production (HTTPS)
+      sameSite: "strict",
+      maxAge: 7 * 24 * 60 * 60 * 1000
+    });
+    res.json({ status: "success", data: user, accessToken });
   });
+
+  // create refresh token api
+  refreshToken = asyncHandler( async(req, res)=>{
+    const token = req.cookie.refreshToken;
+    if(!token){
+      return res.status(401).json({ message: "No refresh token" });
+    }
+    jwt.verify(token, process.env.JWT_REFRESH_SECRET, (err, decoded)=>{
+      if(err){
+        return res.status(403).json({ message: "Invalid refresh token" });
+      }
+      const newAccessToken = generateAccessToken({
+        id:decoded.id
+      })
+      res.json({ accessToken: newAccessToken})
+    })
+  })
 
   // ----------------------------- Get User by ID -----------------------------
   findExistingUser = asyncHandler(async (req, res) => {
     const newUserServices = new UserServices();
-    const user = await newUserServices.findExistingUser(req.params.id);
+    console.log("Profle = ", req.body)
+    const user = await newUserServices.findExistingUser(req.user?.id);
     if (!user) {
       throw new AppError("User not found", 404);
     }
@@ -73,11 +108,11 @@ class UserController {
   // ----------------------------- Update User by ID -----------------------------
   updateById = asyncHandler(async (req, res) => {
     const newUserServices = new UserServices();
-    const user = await newUserServices.findExistingUser(req.params.id);
+    const user = await newUserServices.findExistingUser(req.user.id);
     if (!user) {
       throw new AppError("User not found", 404);
     }
-    const newUser = await newUserServices.updateById(req.params.id, req.body);
+    const newUser = await newUserServices.updateById(req.user.id, req.body);
     if (!newUser) {
       throw new AppError("User not found", 404);
     }
