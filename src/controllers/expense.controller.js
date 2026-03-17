@@ -1,74 +1,76 @@
 // Expense Controller - CRUD Operations for Expenses
-
-const { default: mongoose } = require("mongoose");
 const AppError = require("../middleware/appError");
 const { expenseServices } = require("../services");
 const asyncHandler = require("../utils/asyncHandler");
 
 class ExpenseController {
+  // ----------------------------- Create Expense -----------------------------
+  createExpense = asyncHandler(async (req, res) => {
+    const data = {
+      ...req.body,
+      ownerType: req.body.ownerType,
+      ownerId: req.user.id,
+      createdBy: req.user.id,
+    };
+    const newExpenseServices = new expenseServices();
+    const expns = await newExpenseServices.createExpense(data);
+    res.json({ status: "success", data: expns });
+  });
 
-    // ----------------------------- Create Expense -----------------------------
-    createExpense = asyncHandler(async (req, res) => {
-        const data = {
-            ...req.body,
-            ownerType: req.body.ownerType,
-            ownerId: req.user.id,
-            createdBy: req.user.id
-        };
+  // ----------------------------- Get All Expenses for User -----------------------------
+  getMyExpenses = asyncHandler(async (req, res) => {
+    const newExpenseServices = new expenseServices();
+    const expns = await newExpenseServices.getAllByOwner(
+      req.body.ownerType,
+      req.user.id,
+    );
+    if (!Object.keys(expns).length) {
+      throw new AppError("Expense Not Found", 404);
+    }
+    res.json({ status: "success", data: expns });
+  });
 
-        const expns = await expenseServices.createExpense(data);
-        res.json({ status: "success", data: expns });
-    });
+  // ----------------------------- Get Single Expense -----------------------------
+  getSingleExpense = asyncHandler(async (req, res) => {
+    const ownerId = req.user.id;
+    const newExpenseServices = new expenseServices();
+    const expns = await newExpenseServices.getByIdAndOwner(
+      req.params.id,
+      ownerId,
+    );
+    res.json({ status: "success", data: expns });
+  });
 
+  // ----------------------------- Update Expense -----------------------------
+  updateExpenses = asyncHandler(async (req, res) => {
+    const newExpenseServices = new expenseServices();
+    const expns = await newExpenseServices.updateByIdAndOwner(
+      req.params.id,
+      req.user.id,
+      req.body,
+    );
+    res.json({ status: "success", data: expns });
+  });
 
-    // ----------------------------- Get All Expenses for User -----------------------------
-    getMyExpenses = asyncHandler(async (req, res) => {
-        const expns = await expenseServices.getAllByOwner(req.body.ownerType, req.user.id);
+  // ----------------------------- Delete Expense -----------------------------
+  deleteExpense = asyncHandler(async (req, res) => {
+    const newExpenseServices = new expenseServices();
+    const msg = await newExpenseServices.deleteByIdAndOwner(
+      req.params.id,
+      req.user.id,
+    );
+    res.json({ status: "success", data: msg });
+  });
 
-        if (!Object.keys(expns).length) {
-            throw new AppError("Expense Not Found", 404);
-        }
-
-        res.json({ status: "success", data: expns });
-    });
-
-
-    // ----------------------------- Get Single Expense -----------------------------
-    getSingleExpense = asyncHandler(async (req, res) => {
-        const ownerId = req.user.id;
-        const expns = await expenseServices.getByIdAndOwner(req.params.id, ownerId);
-        res.json({ status: "success", data: expns });
-    });
-
-
-    // ----------------------------- Update Expense -----------------------------
-    updateExpenses = asyncHandler(async (req, res) => {
-        const expns = await expenseServices.updateByIdAndOwner(
-            req.params.id,
-            req.user.id,
-            req.body,
-        );
-        res.json({ status: "success", data: expns });
-    });
-
-
-    // ----------------------------- Delete Expense -----------------------------
-    deleteExpense = asyncHandler(async (req, res) => {
-        const msg = await expenseServices.deleteByIdAndOwner(
-            req.params.id,
-            req.user.id,
-        );
-        res.json({ status: "success", data: msg });
-    });
-
-    // expense aggregation controller here
-    expenseDashboard = asyncHandler(async (req, res) => {
-        console.log("Expense Controller = ",req.user.ownerType, req.user.id )
-        const msg = await expenseServices.getExpenseDashboard(req.user.ownerType, req.user.id)
-        res.json({ status: "success", data: msg });
-    });
-
+  // expense aggregation controller here
+  expenseDashboard = asyncHandler(async (req, res) => {
+    const newExpenseServices = new expenseServices();
+    const msg = await newExpenseServices.getExpenseDashboard(
+      req.user.ownerType,
+      req.user.id,
+    );
+    res.json({ status: "success", data: msg });
+  });
 }
 
-module.exports = new ExpenseController();
-
+module.exports = ExpenseController;

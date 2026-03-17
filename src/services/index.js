@@ -5,7 +5,7 @@ const budgetServices = require("./budget.services");
 const expenseServices = require("./expense.services");
 const orgMemServices = require("./orgMem.services");
 const orgsServices = require("./orgs.services");
-const {UserServices, UserAnalyticsServices} = require("./user.services");
+const UserServices= require("./user.services");
 
 
 module.exports = {
@@ -13,7 +13,6 @@ module.exports = {
     orgsServices,
     orgMemServices,
     UserServices,
-    UserAnalyticsServices,
     expenseServices,
     budgetServices,
 };

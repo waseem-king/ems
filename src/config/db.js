@@ -1,16 +1,21 @@
 require("dotenv").config();
+require('dns').setDefaultResultOrder('ipv4first');
 const mongoose = require("mongoose");
 const logger = require("./logger");
 
 /**
- * Connect to MongoDB database
+ * Connect to MongoDB database with Node 24 optimizations
  */
 const connectDB = async () => {
     try {
+        logger.info('Attempting MongoDB connection...');
+        logger.info(`MONGO_URI length: ${process.env.MONGO_URI ? process.env.MONGO_URI.length : 'undefined'}`);
+        
         const conn = await mongoose.connect(process.env.MONGO_URI);
-        logger.info(`Mongo db connected host is ${conn.connection.host}`);
+        logger.info(`MongoDB connected: ${conn.connection.host}`);
     } catch (error) {
-        logger.error(`Mongo db connection error: ${error.message}`);
+        logger.error(`MongoDB error: ${error.message}`);
+        logger.error(error.stack);
         process.exit(1);
     }
 };

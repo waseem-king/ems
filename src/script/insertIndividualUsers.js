@@ -5,11 +5,10 @@ const bcrypt = require("bcryptjs"); // Essential for insertMany hashing
 const userModel = require("../models/user.model");
 const { faker } = require("@faker-js/faker");
 
-const MONGO_URI = process.env.MONGO_URI || `mongodb+srv://waseem_db_user:wasi7Allah@cluster0.qvgcdm6.mongodb.net/test`;
-
 async function connectDB() {
     try {
-        await mongoose.connect(MONGO_URI);
+        const { default: connectDB } = await import('../config/db.js');
+        await connectDB();
         console.log("MongoDB connected for Individual User Seeding");
     } catch (err) {
         console.error("Connection error:", err);

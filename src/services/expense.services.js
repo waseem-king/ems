@@ -2,6 +2,7 @@
 
 const AppError = require("../middleware/appError");
 const { expenseRepository } = require("../repositories");
+const newExpenseRepository = new expenseRepository();
 const { categorizeExpense } = require("../ai/aiClient");
 class ExpenseServices {
     /**
@@ -91,7 +92,7 @@ class ExpenseServices {
         );
 
         // Save to DB
-        return await expenseRepository.createExpense({
+        return await  newExpenseRepository.createExpense({
             ...dataWithCategory,
             participants: participantsWithOwed,
         });
@@ -101,14 +102,14 @@ class ExpenseServices {
      * Get all expenses by owner
      */
     async getAllByOwner(ownerType, ownerId) {
-        return expenseRepository.getAllByOwner(ownerType, ownerId);
+        return  newExpenseRepository.getAllByOwner(ownerType, ownerId);
     }
 
     /**
      * Get single expense by ID and owner
      */
     async getByIdAndOwner(id, ownerId) {
-        const exp = await expenseRepository.getByIdAndOwner(id, ownerId);
+        const exp = await  newExpenseRepository.getByIdAndOwner(id, ownerId);
         if (!exp) throw new AppError("Expense not found", 404);
         return exp;
     }
@@ -127,7 +128,7 @@ class ExpenseServices {
             data.participants = participantsWithOwed;
         }
 
-        const exp = await expenseRepository.updateByIdAndOwner(id, ownerId, data);
+        const exp = await  newExpenseRepository.updateByIdAndOwner(id, ownerId, data);
         if (!exp) throw new AppError("Expense not found", 404);
         return exp;
     }
@@ -136,7 +137,7 @@ class ExpenseServices {
      * Delete expense by ID and owner
      */
     async deleteByIdAndOwner(id, ownerId) {
-        const exp = await expenseRepository.deleteByIdAndOwner(id, ownerId);
+        const exp = await   newExpenseRepository.deleteByIdAndOwner(id, ownerId);
         if (!exp) throw new AppError("Expense not found", 404);
         return exp;
     }
@@ -156,9 +157,9 @@ class ExpenseServices {
     }
                 // Expense Aggregation 
     async getExpenseDashboard(ownerType, ownerId){
-        return await expenseRepository.getExpenseDashboard(ownerType, ownerId)
+        return await  newExpenseRepository.getExpenseDashboard(ownerType, ownerId)
     }
 }
 
-module.exports = new ExpenseServices;
+module.exports = ExpenseServices;
 

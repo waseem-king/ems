@@ -33,9 +33,7 @@ class ExpensesRepo {
     return { message: "Expense Deleted Successfully" };
   }
 
-// ===========================================================================
                 // Budget aggregations
-// ===========================================================================
    async getExpenseDashboard(ownerType, ownerId) {
     const objectId = new mongoose.Types.ObjectId(ownerId)
     return expenseModel.aggregate([
@@ -49,9 +47,7 @@ class ExpensesRepo {
       {
         $facet: {
 
-          // ==============================
           // OVERVIEW
-          // ==============================
           overview: [
             {
               $group: {
@@ -65,9 +61,7 @@ class ExpensesRepo {
             }
           ],
 
-          // ==============================
           // MONTHLY TREND
-          // ==============================
           monthlySpending: [
             {
               $group: {
@@ -81,9 +75,7 @@ class ExpensesRepo {
             { $sort: { "_id.year": 1, "_id.month": 1 } }
           ],
 
-          // ==============================
           // CATEGORY WISE
-          // ==============================
           categoryWise: [
             {
               $group: {
@@ -114,25 +106,19 @@ class ExpensesRepo {
             }
           ],
 
-          // ==============================
           // TOP EXPENSES
-          // ==============================
           topExpenses: [
             { $sort: { amount: -1 } },
             { $limit: 5 }
           ],
 
-          // ==============================
           // RECENT EXPENSES
-          // ==============================
           recentExpenses: [
             { $sort: { date: -1 } },
             { $limit: 5 }
           ],
 
-          // ==============================
           // DAILY AVG SPENDING
-          // ==============================
           dailyAverage: [
             {
               $group: {
@@ -158,4 +144,4 @@ class ExpensesRepo {
   }
 }
 
-module.exports = new ExpensesRepo();
+module.exports = ExpensesRepo;

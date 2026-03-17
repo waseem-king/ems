@@ -91,6 +91,7 @@ app.use(express.static("./public"));
 // User routes
 app.use("/api", limiter, userRoutes);
 
+
 // Organization routes
 app.use("/api", orgRoutes);
 
@@ -114,9 +115,14 @@ app.get("/profile", (req, res) => {
 });
 
 // BullMQ dashboard 
-
 app.use('/admin/queues', bullBoardRouter);
 
+// Test routes for queues
+app.use("/test", require("./routes/test.routes"))
+
+// here are the email worker and redis files 
+require("./workers/monthlyReport.worker")
+require("./schedulers/monthlyReport.cron")
 // Error Handling Middleware
 
 app.use((err, req, res, next) => {

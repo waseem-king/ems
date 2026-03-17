@@ -32,9 +32,7 @@ class BudgetRepo {
     return budget;
   }
 
-  // ===========================================================================
   // Budget aggregations
-  // ===========================================================================
   async getBudgetDashboard(ownerType, ownerId) {
     const objectId = new mongoose.Types.ObjectId(ownerId)
     return budgetModel.aggregate([
@@ -181,5 +179,5 @@ class BudgetRepo {
   }
 }
 
-module.exports = new BudgetRepo;
+module.exports = BudgetRepo;
 

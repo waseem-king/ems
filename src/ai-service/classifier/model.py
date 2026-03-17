@@ -51,6 +51,11 @@ CATEGORY_KEYWORDS = {
         "hotel", "motel", "airbnb", "resort", "lodging", "accommodation",
         "vacation", "trip", "booking", "hostel", "suite", "room"
     ],
+    "loan":[
+        "loan", "credit", "advance", "mortage", "overdraft", "overdraft", 
+        "lending", "advance", "sub", "advance", "borrow", "lease" 
+    ],
+    "marketing":["ada", "google", "adwords", "facebook", "fb", "instagram", "linkedin", "tiktok", "ppc", "pay per click", "retargeting", "sponsored", "adsense"],
     "other": []  # Default category
 }
 

@@ -1,45 +1,40 @@
-// ==========================================================================
 // Organization Routes - Organization Management Endpoints
-// ==========================================================================
-
 const express = require("express");
 const router = express.Router();
 
 // ----------------------------- Controllers -----------------------------
 const { orgsController } = require("../controllers");
+const newOrgsController = new orgsController();
 const {
   createOrUpdateOrganizationValidator,
   organizationIdParamValidator,
 } = require("../validators/organization.validator");
 const { protect } = require("../middleware/auth.middleware");
 
-// ==========================================================================
 // Routes
-// ==========================================================================
-
 // Create new organization
 router.post(
   "/orgs",
   protect,
   createOrUpdateOrganizationValidator,
-  orgsController.createOrg,
+  newOrgsController.createOrg
 );
 
 ///////////////////////////////// ORG AGGREGATION ROUTES ////////////////////////////////////
 router.get(
   "/orgs/orgDashboard",
   protect,
-  orgsController.orgDashboard
+  newOrgsController.orgDashboard
 )
 // Get all organizations
-router.get("/orgs", protect, orgsController.getAllOrgs);
+router.get("/orgs", protect, newOrgsController.getAllOrgs);
 
 // Get organization by ID
 router.get(
   "/orgs/:id",
   protect,
   organizationIdParamValidator,
-  orgsController.getOne,
+  newOrgsController.getOne,
 );
 
 // Update organization by ID
@@ -48,7 +43,7 @@ router.put(
   protect,
   createOrUpdateOrganizationValidator,
   organizationIdParamValidator,
-  orgsController.updateOne,
+  newOrgsController.updateOne,
 );
 
 // Delete organization by ID
@@ -56,11 +51,8 @@ router.delete(
   "/orgs/:id",
   protect,
   organizationIdParamValidator,
-  orgsController.deleteOrg,
+  newOrgsController.deleteOrg,
 );
 
-
-
-// ==========================================================================
-
 module.exports = router;
+

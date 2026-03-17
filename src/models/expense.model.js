@@ -20,7 +20,8 @@ const expenseSchema = new mongoose.Schema(
   title: String,
 
   amount: { type: Number, required: true },
-
+  defaultCurrency: { type: String, default:"PKR"},
+  currency: {type:String, required: true},
   category: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Category"

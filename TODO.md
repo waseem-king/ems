@@ -1,12 +1,11 @@
-# AI Expense Category Prediction - Implementation Plan
+# MongoDB Connection Fix - Node 24 Compatibility
 
-## Tasks:
-- [ ] 1. Create the Python ML Classifier (src/ai-service/classifier/model.py)
-- [ ] 2. Create the Python Flask API Server (src/ai-service/app.py)
-- [ ] 3. Create the Node.js AI Client (src/ai/aiClient.js)
-- [ ] 4. Integrate AI into Expense Services (src/services/expense.services.js)
-- [ ] 5. Update services index to export AI service (src/services/index.js)
-- [ ] 6. Install axios dependency
+## Approved Plan Steps:
+- [x] Step 1: Update `src/config/db.js` with IPv4-only + TLS options for Node 24 DNS/SRV fix.
+- [ ] Step 2: Remove hardcoded MONGO_URI from all `src/script/*.js` files (use process.env only).
+- [ ] Step 3: Test connection with `npm run dev` and verify "Mongo db connected" log.
+- [ ] Step 4: Run DNS test if needed.
+- [ ] Step 5: Complete task.
 
-## Status: In Progress
+Status: Step 1 In Progress - DNS ECONNREFUSED persists. Added debug logs. Test dev server logs + nslookup. If DNS fails, use standard URI.
 
